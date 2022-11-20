@@ -1,0 +1,15 @@
+domain.pddl
+files.txt
+prob01.pddl
+prob02.pddl
+prob03.pddl
+prob09.pddl
+prob11.pddl
+prob19.pddl
+prob20.pddl
+prob25.pddl
+prob26.pddl
+prob27.pddl
+prob28.pddl
+prob29.pddl
+prob30.pddl

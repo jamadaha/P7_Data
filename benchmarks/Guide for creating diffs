@@ -1,0 +1,7 @@
+Write all files to file
+ls > files.txt
+Copy all files from dir to other, excluding those in txt file
+rsync -a --exclude-from='.../files.txt' SOURCE_DIR/ TARGET_DIR/
+e.g. rsync -a --exclude-from='logistics_easy/files.txt' logistics/ logistics_medium/
+
+

@@ -1,0 +1,5 @@
+domain.pddl
+files.txt
+p01.pddl
+p02.pddl
+p03.pddl
