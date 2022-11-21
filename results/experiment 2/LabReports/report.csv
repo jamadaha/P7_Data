@@ -1,0 +1,75 @@
+domain,problem,algorithm,unexplained_errors,error,raw_memory,p7_settings_file,cost,coverage,dead_ends,evaluations,expansions,generated,initial_h_value,plan_length,planner_time,search_time,translator_facts,reformulation_time,reformulated_plan_valid,rebuild_plan_valid,solvable,plan_length_difference,macros_used,macros_generated
+driverlog_hard,p16.pddl,probeWalker,['Rebuild plan was not valid!'],success,65696,experiment_2,155.0,1,0,288498,72124,1877511, ,155,10.8794,10.6474,500,48416.0,True,False,True,-1,0,4
+driverlog_hard,p18.pddl,probeWalker,['Rebuild plan was not valid!'],success,36176,experiment_2,216.0,1,0,35470,8867,282832, ,216,3.15426,2.64773,825,42086.0,True,False,True,-3,0,3
+driverlog_hard,p19.pddl,probeWalker,['Rebuild plan was not valid!'],success,43816,experiment_2,285.0,1,0,41486,10371,354165, ,285,4.25254,3.81176,1050,7945.0,True,False,True,-2,0,6
+driverlog_hard,p20.pddl,probeWalker, ,success,102408,experiment_2,137.0,1,0,217570,54392,3051451, ,137,27.4968,26.2661,1276,66810.0,True,True,True,0,0,0
+freecell_hard,p13.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_hard,p15.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_hard,p16.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_hard,p18.pddl,probeWalker, ,success, ,experiment_2, ,0, , , , , , , , , ,2856.0, , ,False, , , 
+freecell_hard,probfreecell-10-1.pddl,probeWalker, ,success, ,experiment_2, ,0, , , , , , , , , ,2894.0, , ,False, , , 
+freecell_hard,probfreecell-10-4.pddl,probeWalker, ,success,107772,experiment_2,76.0,1,16,4210,1048,6516, ,76,13.345400000000001,10.6754,375,27542.0,True,True,True,6,1,3
+freecell_hard,probfreecell-11-2.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_hard,probfreecell-11-4.pddl,probeWalker, ,success, ,experiment_2, ,0, , , , , , , , , ,2921.0, , ,False, , , 
+freecell_hard,probfreecell-11-5.pddl,probeWalker, ,success, ,experiment_2, ,0, , , , , , , , , ,2839.0, , ,False, , , 
+freecell_hard,probfreecell-12-2.pddl,probeWalker, ,success, ,experiment_2, ,0, , , , , , , , , ,11074.0, , ,False, , , 
+freecell_hard,probfreecell-12-4.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_2, ,0, , , , , , , , , ,2859.0, , ,False, , , 
+freecell_hard,probfreecell-13-1.pddl,probeWalker,['Invalid macros was generated!'],success,101476,experiment_2, ,0, , , , , , , , ,484,41235.0, , ,False, , , 
+freecell_hard,probfreecell-13-3.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_hard,probfreecell-13-4.pddl,probeWalker,['Invalid macros was generated!'],success,96964,experiment_2, ,0, , , , , , , , ,483,13456.0, , ,False, , , 
+freecell_hard,probfreecell-9-5.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,455.0, , ,False, , , 
+logistics_hard,p05.pddl,probeWalker, ,success,64260,experiment_2,167.0,1,0,8962,2240,896348, ,167,7.15231,4.59154,5168,19450.0,True,True,True,0,0,0
+logistics_hard,p06.pddl,probeWalker, ,success,109952,experiment_2,201.0,1,0,17606,4401,2148852, ,201,12.224,10.7592,7192,27096.0,True,True,True,0,0,0
+logistics_hard,p07.pddl,probeWalker, ,success,150608,experiment_2,230.0,1,0,23970,5992,3360123, ,230,29.037200000000002,26.014,9182,68847.0,True,True,True,0,0,0
+logistics_hard,p08.pddl,probeWalker, ,success,187104,experiment_2,259.0,1,0,24998,6249,4101367, ,259,34.007600000000004,31.2812,12434,80023.0,True,True,True,0,0,0
+logistics_hard,p09.pddl,probeWalker, ,success,309892,experiment_2,307.0,1,0,49582,12395,9254598, ,307,41.2209,38.7695,15065,167266.0,True,True,True,0,0,0
+satellite_hard,p28-HC-pfile8.pddl,probeWalker, ,success,238852,experiment_2,220.0,1,0,6834,1708,1816985, ,220,13.4336,6.67563,1352,28218.0,True,True,True,0,0,1
+satellite_hard,p29-HC-pfile9.pddl,probeWalker, ,success,227784,experiment_2,190.0,1,0,974,243,385485, ,190,8.90384,1.65587,1891,21084.0,True,True,True,0,0,5
+satellite_hard,p30-HC-pfile10.pddl,probeWalker, ,success,377152,experiment_2,290.0,1,0,8550,2137,4043437, ,290,51.2477,34.1104,2245,100595.0,True,True,True,0,0,7
+satellite_hard,p31-HC-pfile11.pddl,probeWalker, ,success,813468,experiment_2,285.0,1,0,7406,1851,4328613, ,285,66.1685,47.9495,2735,217613.0,True,True,True,0,0,2
+satellite_hard,p34-HC-pfile14.pddl,probeWalker, ,success,735948,experiment_2,290.0,1,0,1162,290,298142, ,290,15.973479999999999,3.8676,1343,32195.0,True,True,True,0,0,2
+satellite_hard,p35-HC-pfile15.pddl,probeWalker, ,success,1052724,experiment_2,418.0,1,0,5070,1267,2084827, ,418,46.071,18.2551,2088,88408.0,True,True,True,0,0,0
+satellite_hard,p36-HC-pfile16.pddl,probeWalker, ,success,1066588,experiment_2,390.0,1,0,3190,797,1642550, ,390,36.4628,13.5873,2512,85387.0,True,True,True,0,0,2
+zenotravel_hard,p15.pddl,probeWalker, ,success,23320,experiment_2,44.0,1,0,1246,311,13927, ,44,1.0868280000000001,0.135995,333,1656.0,True,True,True,3,1,1
+zenotravel_hard,p16.pddl,probeWalker, ,success, ,experiment_2, , , , , , , , , , , ,452.0, , ,False, , , 
+zenotravel_hard,p17.pddl,probeWalker, ,success,33992,experiment_2,75.0,1,0,2186,546,36130, ,75,2.835785,0.671973,535,5789.0,True,True,True,4,1,4
+zenotravel_hard,p18.pddl,probeWalker, ,success,39524,experiment_2,76.0,1,0,1750,437,23749, ,76,2.107889,0.463974,585,5068.0,True,True,True,0,0,0
+zenotravel_hard,p19.pddl,probeWalker, ,success,47192,experiment_2,96.0,1,0,2458,614,41116, ,96,2.773887,0.847937,760,5704.0,True,True,True,0,0,2
+zenotravel_hard,p20.pddl,probeWalker,['Invalid macros was generated!'],success,58132,experiment_2, ,0, , , , , , , , ,820,12581.0, , ,False, , , 
+driverlog_hard,p16.pddl,sameoutput, ,success,348580,experiment_2,177.0,1,0,2335870,583967,14872932, ,177,85.53399999999999,85.332,500,266889.0,True,True,True,0,0,0
+driverlog_hard,p18.pddl,sameoutput, ,success,67624,experiment_2,163.0,1,0,232102,58025,1719997, ,163,18.78,18.4147,825,39493.0,True,True,True,0,0,0
+driverlog_hard,p19.pddl,sameoutput, ,success,67160,experiment_2,277.0,1,0,211402,52850,1514032, ,277,16.049,15.507,1050,36560.0,True,True,True,0,0,0
+driverlog_hard,p20.pddl,sameoutput, ,success,102408,experiment_2,137.0,1,0,217570,54392,3051451, ,137,26.898699999999998,26.1227,1276,48221.0,True,True,True,0,0,0
+freecell_hard,p13.pddl,sameoutput, ,success,64472,experiment_2,88.0,1,13,3547,883,5070, ,88,4.96781,2.97982,369,6111.0,True,True,True,0,0,0
+freecell_hard,p15.pddl,sameoutput, ,success,93568,experiment_2,87.0,1,14,8860,2211,12478, ,87,28.3205,24.8108,407,52431.0,True,True,True,0,0,0
+freecell_hard,p16.pddl,sameoutput, ,success,93404,experiment_2,84.0,1,13,2855,710,4363, ,84,7.0817000000000005,4.31572,407,14705.0,True,True,True,0,0,0
+freecell_hard,p18.pddl,sameoutput, ,success,108968,experiment_2,123.0,1,1135,44861,10931,57437, ,123,97.14689999999999,93.7829,446,160171.0,True,True,True,0,0,0
+freecell_hard,probfreecell-10-1.pddl,sameoutput, ,success,107828,experiment_2,90.0,1,1073,25415,6085,28290, ,90,37.9602,35.2782,376,61504.0,True,True,True,0,0,0
+freecell_hard,probfreecell-10-4.pddl,sameoutput, ,success,104764,experiment_2,91.0,1,147,6333,1546,8504, ,91,10.38355,8.06757,375,19035.0,True,True,True,0,0,0
+freecell_hard,probfreecell-11-2.pddl,sameoutput, ,success,110860,experiment_2,72.0,1,0,2110,527,4298, ,72,6.28373,3.44376,411,14322.0,True,True,True,0,0,0
+freecell_hard,probfreecell-11-4.pddl,sameoutput, ,success,110528,experiment_2,95.0,1,51,5181,1282,6941, ,95,10.950489999999999,8.94348,411,18055.0,True,True,True,0,0,0
+freecell_hard,probfreecell-11-5.pddl,sameoutput, ,success,112468,experiment_2,121.0,1,82,13220,3284,17141, ,121,29.1742,27.0182,412,51297.0,True,True,True,0,0,0
+freecell_hard,probfreecell-12-2.pddl,sameoutput, ,success,119268,experiment_2,100.0,1,69,50327,12564,73446, ,100,76.8614,71.8145,447,141782.0,True,True,True,0,0,0
+freecell_hard,probfreecell-12-4.pddl,sameoutput, ,success,118244,experiment_2,132.0,1,118,24916,6199,30300, ,132,58.1604,54.1964,448,123381.0,True,True,True,0,0,0
+freecell_hard,probfreecell-13-1.pddl,sameoutput, ,success,126392,experiment_2,140.0,1,3023,49365,11585,52968, ,140,60.021,57.6417,484,126863.0,True,True,True,0,0,0
+freecell_hard,probfreecell-13-3.pddl,sameoutput, ,success,124528,experiment_2,108.0,1,88,4830,1185,5651, ,108,10.455540000000001,7.96356,483,17527.0,True,True,True,0,0,0
+freecell_hard,probfreecell-13-4.pddl,sameoutput, ,success,125612,experiment_2,127.0,1,1202,29296,7023,28917, ,127,119.555,114.343,483,187241.0,True,True,True,0,0,0
+freecell_hard,probfreecell-9-5.pddl,sameoutput, ,success,100584,experiment_2,76.0,1,0,3162,790,5149, ,76,7.38654,5.45947,340,14365.0,True,True,True,0,0,0
+logistics_hard,p05.pddl,sameoutput, ,success,64260,experiment_2,167.0,1,0,8962,2240,896348, ,167,9.01962,7.56762,5168,17221.0,True,True,True,0,0,0
+logistics_hard,p06.pddl,sameoutput, ,success,109952,experiment_2,201.0,1,0,17606,4401,2148852, ,201,14.6373,12.7753,7192,23240.0,True,True,True,0,0,0
+logistics_hard,p07.pddl,sameoutput, ,success,150608,experiment_2,230.0,1,0,23970,5992,3360123, ,230,27.2264,24.7504,9182,48315.0,True,True,True,0,0,0
+logistics_hard,p08.pddl,sameoutput, ,success,187104,experiment_2,259.0,1,0,24998,6249,4101367, ,259,36.4523,30.8744,12434,60960.0,True,True,True,0,0,0
+logistics_hard,p09.pddl,sameoutput, ,success,309892,experiment_2,307.0,1,0,49582,12395,9254598, ,307,87.2509,83.173,15065,157935.0,True,True,True,0,0,0
+satellite_hard,p28-HC-pfile8.pddl,sameoutput, ,success,238780,experiment_2,220.0,1,0,6834,1708,1815277, ,220,22.579900000000002,12.1554,1352,27845.0,True,True,True,0,0,0
+satellite_hard,p29-HC-pfile9.pddl,sameoutput, ,success,230744,experiment_2,190.0,1,0,1274,318,503796, ,190,9.4244,1.71588,1891,27889.0,True,True,True,0,0,0
+satellite_hard,p30-HC-pfile10.pddl,sameoutput, ,success,472076,experiment_2,290.0,1,0,19878,4969,9390147, ,290,55.430499999999995,43.4286,2245,131445.0,True,True,True,0,0,0
+satellite_hard,p31-HC-pfile11.pddl,sameoutput, ,success,813360,experiment_2,285.0,1,0,7406,1851,4326760, ,285,43.7081,23.1426,2735,62514.0,True,True,True,0,0,0
+satellite_hard,p34-HC-pfile14.pddl,sameoutput, ,success,736012,experiment_2,290.0,1,0,1162,290,297849, ,290,13.54152,3.71979,1343,18883.0,True,True,True,0,0,0
+satellite_hard,p35-HC-pfile15.pddl,sameoutput, ,success,1052724,experiment_2,418.0,1,0,5070,1267,2084827, ,418,43.0166,18.1951,2088,61914.0,True,True,True,0,0,0
+satellite_hard,p36-HC-pfile16.pddl,sameoutput, ,success,1110072,experiment_2,395.0,1,0,7630,1907,3925745, ,395,73.38329999999999,33.8055,2512,92009.0,True,True,True,0,0,0
+zenotravel_hard,p15.pddl,sameoutput, ,success,23332,experiment_2,45.0,1,0,1378,344,14497, ,45,0.6696200000000001,0.0919967,333,753.0,True,True,True,0,0,0
+zenotravel_hard,p16.pddl,sameoutput, ,success,28076,experiment_2,54.0,1,0,642,160,14607, ,54,1.109995,0.0799972,390,2312.0,True,True,True,0,0,0
+zenotravel_hard,p17.pddl,sameoutput, ,success,33976,experiment_2,78.0,1,0,3094,773,45838, ,78,1.943972,0.403975,535,3063.0,True,True,True,0,0,0
+zenotravel_hard,p18.pddl,sameoutput, ,success,39524,experiment_2,76.0,1,0,1750,437,23749, ,76,2.033215,0.483954,585,3143.0,True,True,True,0,0,0
+zenotravel_hard,p19.pddl,sameoutput, ,success,46928,experiment_2,96.0,1,0,2410,602,38507, ,96,4.85266,1.07595,760,6158.0,True,True,True,0,0,0
+zenotravel_hard,p20.pddl,sameoutput, ,success,55888,experiment_2,107.0,1,0,5890,1472,92353, ,107,7.79374,4.72375,820,15840.0,True,True,True,0,0,0
