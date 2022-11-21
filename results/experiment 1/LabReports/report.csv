@@ -1,157 +1,781 @@
 domain,problem,algorithm,unexplained_errors,error,raw_memory,p7_settings_file,cost,coverage,dead_ends,evaluations,expansions,generated,initial_h_value,plan_length,planner_time,search_time,translator_facts,reformulation_time,reformulated_plan_valid,rebuild_plan_valid,solvable,plan_length_difference,macros_used,macros_generated
-depot_medium,p09.pddl,probeWalker, ,success,20952,experiment_1,123.0,1,0,9630,2407,31186, ,123,0.863174,0.699863,525,1387.0,True,True,True,0,0,8
-depot_medium,p10.pddl,probeWalker, ,success,14508,experiment_1,40.0,1,0,7538,1884,35346, ,40,0.275262,0.175983,246,832.0,True,True,True,0,0,62
-depot_medium,p11.pddl,probeWalker, ,success,27324,experiment_1,139.0,1,0,11258,2814,48470, ,139,1.3875000000000002,1.23196,356,4661.0,True,True,True,0,0,12
-depot_medium,p17.pddl,probeWalker, ,success,21368,experiment_1,42.0,1,0,3266,816,22163, ,42,0.85983,0.427983,454,1396.0,True,True,True,0,0,4
-depot_medium,p18.pddl,probeWalker, ,success,33616,experiment_1,70.0,1,0,2486,621,20507, ,70,0.899539,0.439993,724,4508.0,True,True,True,0,0,16
-depot_medium,p21.pddl,probeWalker, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.089926,0.383918,792,1613.0,True,True,True,0,0,0
-freecell_medium,p08.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,458.0, , ,False, , , 
-freecell_medium,p09.pddl,probeWalker, ,success,42904,experiment_1,54.0,1,14,968,238,1178, ,54,1.565496,0.567983,296,2106.0,True,True,True,4,1,2
-freecell_medium,p10.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,p11.pddl,probeWalker, ,success,51500,experiment_1,66.0,1,11,845,208,991, ,66,1.142284,0.387984,334,1664.0,True,True,True,3,1,2
-freecell_medium,p12.pddl,probeWalker, ,success,51072,experiment_1,52.0,1,6,444,109,839, ,52,1.141015,0.195935,332,1674.0,True,True,True,2,1,30
-freecell_medium,p14.pddl,probeWalker, ,success,65416,experiment_1,73.0,1,14,1132,279,1781, ,73,1.799752,0.68798,369,4774.0,True,True,True,3,1,9
-freecell_medium,p17.pddl,probeWalker, ,success,107212,experiment_1,81.0,1,10,1532,380,2625, ,81,3.3264899999999997,1.70393,443,6231.0,True,True,True,6,1,4
-freecell_medium,probfreecell-10-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2852.0, , ,False, , , 
-freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2841.0, , ,False, , , 
+depot_medium,p09.pddl,probeWalker, ,success,24028,experiment_1,105.0,1,0,44386,11096,145312, ,105,3.2274700000000003,3.0639,525,6358.0,True,True,True,4,1,12
+depot_medium,p10.pddl,probeWalker, ,success,13676,experiment_1,31.0,1,0,1066,266,4678, ,31,0.10599920000000002,0.0279986,246,612.0,True,True,True,0,0,14
+depot_medium,p11.pddl,probeWalker, ,success,19812,experiment_1,93.0,1,0,7922,1980,42033, ,93,0.638861,0.475982,418,1154.0,True,True,True,0,0,32
+depot_medium,p17.pddl,probeWalker, ,success,21584,experiment_1,42.0,1,0,3278,819,34016, ,42,0.5319940000000001,0.235994,454,3688.0,True,True,True,0,0,71
+depot_medium,p18.pddl,probeWalker, ,success,33568,experiment_1,74.0,1,0,2494,623,19505, ,74,1.004666,0.543928,724,1511.0,True,True,True,0,0,2
+depot_medium,p21.pddl,probeWalker, ,success,67236,experiment_1,33.0,1,0,734,183,15065, ,33,1.1519810000000001,0.395983,792,1687.0,True,True,True,0,0,1
+freecell_medium,p08.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,p09.pddl,probeWalker, ,success,43132,experiment_1,62.0,1,9,783,193,916, ,62,0.8619870000000001,0.267988,296,1375.0,True,True,True,3,1,7
+freecell_medium,p10.pddl,probeWalker, ,success,52084,experiment_1,63.0,1,0,1090,272,2082, ,63,1.212936,0.46399,332,1727.0,True,True,True,3,1,3
+freecell_medium,p11.pddl,probeWalker, ,success,51648,experiment_1,66.0,1,35,1041,251,1168, ,66,1.301361,0.43199,334,1845.0,True,True,True,2,1,4
+freecell_medium,p12.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,p14.pddl,probeWalker, ,success,59276,experiment_1, ,0, , , , , , , , ,369,3763.0, , ,False, , , 
+freecell_medium,p17.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2860.0, , ,False, , , 
+freecell_medium,probfreecell-10-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2856.0, , ,False, , , 
+freecell_medium,probfreecell-10-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-11-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-12-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2856.0, , ,False, , , 
+freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success,40268,experiment_1,21.0,1,0,90,22,238, ,21,0.6939719999999999,0.0359984,163,1227.0,True,True,True,2,1,7
+freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success,39732,experiment_1,18.0,1,0,82,20,261, ,18,0.5698364,0.0319991,160,1079.0,True,True,True,3,1,3
+freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success,40140,experiment_1,17.0,1,0,82,20,249, ,17,1.061985,0.0559995,161,1600.0,True,True,True,3,1,4
+freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2859.0, , ,False, , , 
+freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success,56296,experiment_1,24.0,1,0,118,29,350, ,24,0.797995,0.0559987,197,1302.0,True,True,True,0,0,4
+freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success,55304,experiment_1,27.0,1,0,114,28,384, ,27,0.772973,0.0640002,196,1296.0,True,True,True,0,0,3
+freecell_medium,probfreecell-6-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-6-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2847.0, , ,False, , , 
+freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2869.0, , ,False, , , 
+freecell_medium,probfreecell-7-2.pddl,probeWalker, ,success,65380,experiment_1,35.0,1,0,162,40,471, ,35,1.135972,0.103985,268,1657.0,True,True,True,3,1,10
+freecell_medium,probfreecell-7-3.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2860.0, , ,False, , , 
+freecell_medium,probfreecell-7-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,460.0, , ,False, , , 
+freecell_medium,probfreecell-7-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-8-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-8-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,459.0, , ,False, , , 
+freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,459.0, , ,False, , , 
+freecell_medium,probfreecell-9-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2860.0, , ,False, , , 
+freecell_medium,probfreecell-9-2.pddl,probeWalker, ,success,101076,experiment_1,50.0,1,0,490,122,1113, ,50,1.680221,0.375954,338,4584.0,True,True,True,5,1,2
+freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-9-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.509315,0.955918,3288,2144.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.275982,0.111984,656,12230.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.9579634,0.01,423,1913.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.7594090000000002,0.0559937,1413,7161.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.869988,0.295994,1604,6487.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,4.413989,0.135998,1671,9130.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.145816,0.0440151,782,14606.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.281015,0.0159993,776,4561.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,3.433875,0.195985,619,14521.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.8539407,0.0239994,564,1409.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.211422,0.0239991,574,29159.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.900001,0.0640152,744,1488.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,3.299012,0.0999981,1192,7061.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,2.2478029999999998,0.103998,691,6039.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.421884,0.0239986,873,4944.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,2.6288720000000003,0.0799984,380,12183.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.098892,0.0439988,883,8527.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,probeWalker, ,success,34696,experiment_1,15.0,1,0,142,35,1014, ,15,0.628943,0.0584116,552,1133.0,True,True,True,3,1,2
+mystery_medium,prob10.pddl,probeWalker, ,success,73052,experiment_1,8.0,1,0,42,10,393, ,8,2.134009,0.0399983,1346,5100.0,True,True,True,0,0,1
+mystery_medium,prob13.pddl,probeWalker, ,success,45952,experiment_1,15.0,1,1,183,45,1909, ,15,1.133979,0.0799809,1427,4107.0,True,True,True,2,1,14
+mystery_medium,prob14.pddl,probeWalker, ,success,88600,experiment_1,11.0,1,2,88,21,997, ,11,2.747952,0.155976,1601,5674.0,True,True,True,0,0,10
+mystery_medium,prob15.pddl,probeWalker, ,success,42932,experiment_1,6.0,1,0,46,11,369, ,6,0.9313969999999999,0.0199996,681,1447.0,True,True,True,0,0,3
+mystery_medium,prob17.pddl,probeWalker, ,success,40648,experiment_1,4.0,1,0,26,6,271, ,4,1.023997,0.0159994,730,3945.0,True,True,True,2,1,18
+satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,28620,experiment_1,108.0,1,0,2814,703,156078, ,108,0.419276,0.127996,337,924.0,True,True,True,0,0,4
+satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,36288,experiment_1,122.0,1,0,2594,648,174929, ,122,0.611974,0.172004,401,1139.0,True,True,True,0,0,1
+satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,43472,experiment_1,133.0,1,0,2782,695,265501, ,133,1.0473189999999999,0.323985,551,1561.0,True,True,True,0,0,3
+satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,94708,experiment_1,156.0,1,0,1458,364,188675, ,156,1.7409080000000001,0.383956,717,4666.0,True,True,True,0,0,2
+satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,104192,experiment_1,172.0,1,0,4638,1159,687420, ,172,3.81355,1.16797,788,6781.0,True,True,True,0,0,5
+satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,98372,experiment_1,151.0,1,0,870,217,130633, ,151,3.671592,0.567978,816,6634.0,True,True,True,0,0,1
+satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.07465,0.195995,966,9708.0,True,True,True,0,0,0
+depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,3.67873,3.52388,489,4906.0,True,True,True,0,0,0
+depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,1.049913,0.968674,204,1103.0,True,True,True,0,0,0
+depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,1.4373799999999999,1.19978,356,2826.0,True,True,True,0,0,0
+depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,3.15938,2.71992,408,4666.0,True,True,True,0,0,0
+depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,1.94367,1.4759,663,3476.0,True,True,True,0,0,0
+depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,2.2799699999999996,0.839981,792,3511.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,0.628961,0.155996,295,683.0,True,True,True,0,0,0
+freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,0.591996,0.111996,296,645.0,True,True,True,0,0,0
+freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,1.558868,0.647987,332,1643.0,True,True,True,0,0,0
+freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,3.5168100000000004,2.23192,334,4671.0,True,True,True,0,0,0
+freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,1.1759789999999999,0.183981,332,2357.0,True,True,True,0,0,0
+freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,1.97483,1.00391,369,3081.0,True,True,True,0,0,0
+freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,4.6194299999999995,2.8239,443,5864.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,2.24794,0.807974,375,3365.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,2.38992,0.815929,374,3520.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,4.13582,1.39191,376,5270.0,True,True,True,0,0,0
+freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,5.3293800000000005,2.31189,411,6459.0,True,True,True,0,0,0
+freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,3.54744,1.77986,447,4656.0,True,True,True,0,0,0
+freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,4.06141,2.15192,483,5177.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,1.0083900000000001,0.0639993,163,1083.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,0.545775,0.0319982,160,627.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,0.5459973,0.0279993,162,615.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,0.5454307,0.027999,161,604.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,0.5640031,0.0240007,161,641.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,0.917254,0.0799981,198,2029.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,0.9390700000000001,0.0599987,197,2061.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,0.721389,0.0519993,195,794.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,1.361993,0.115998,198,2499.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,1.084933,0.0440031,196,1163.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,1.136325,0.139989,232,2253.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,0.942454,0.0759978,233,998.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,1.617297,0.163996,231,2811.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,1.065996,0.0959987,233,1141.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,0.9007649999999999,0.0999977,232,1993.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,1.375979,0.339984,268,1441.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.345969,0.195987,268,1427.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,1.119298,0.143997,267,1201.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,1.691643,0.711919,269,1754.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,2.90153,1.15997,268,4030.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,2.4372499999999997,1.08793,306,3585.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,1.535774,0.223995,303,2678.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,1.3839489999999999,0.239954,303,2489.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,2.03728,0.89995,303,3139.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,3.06762,1.84232,304,4195.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,3.4195899999999995,2.1036,340,4534.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,2.0510289999999998,0.487927,338,3148.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,1.865142,0.371992,339,2984.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,3.4002600000000003,2.09993,339,4479.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.742974,0.843941,3288,1815.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.3707159999999998,0.131998,656,2496.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.9459981,0.0199997,423,1026.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.771014,0.063992,1413,3887.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.956667,0.339978,1604,4058.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,6.81428,0.275989,1671,12033.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.779659,0.0476643,782,3914.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.26172,0.0160014,776,2418.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,3.401918,0.183934,619,4533.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,1.067984,0.0519988,564,2180.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.487497,0.0319998,574,7645.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.875999,0.0200005,744,1986.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.782698,0.0799981,1192,3900.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.428362,0.0639991,691,2544.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.741994,0.0519992,873,2867.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.465155,0.047933,380,2598.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.153983,0.0479993,883,2336.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,1.386993,0.695966,552,1460.0,True,True,True,0,0,0
+mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,2.165831,0.0399932,1346,3303.0,True,True,True,0,0,0
+mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.499352,0.435929,1427,2617.0,True,True,True,0,0,0
+mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,2.993401,0.119998,1601,4137.0,True,True,True,0,0,0
+mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,1.859997,0.0479995,681,2982.0,True,True,True,0,0,0
+mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,0.9906782000000001,0.01,730,1068.0,True,True,True,0,0,0
+satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.3325938,0.0240003,337,413.0,True,True,True,0,0,0
+satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.997237,0.143996,401,1079.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,0.981265,0.299993,551,1057.0,True,True,True,0,0,0
+satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,3.93533,1.77994,717,5081.0,True,True,True,0,0,0
+satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,3.40595,1.77195,788,4495.0,True,True,True,0,0,0
+satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,2.9047840000000003,0.263986,816,4028.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,3.825888,0.415986,966,4945.0,True,True,True,0,0,0
+depot_medium,p09.pddl,probeWalker, ,success,20972,experiment_1,123.0,1,0,9618,2404,32379, ,123,0.857925,0.663926,525,3973.0,True,True,True,0,0,14
+depot_medium,p10.pddl,probeWalker, ,success,16972,experiment_1,42.0,1,0,12642,3160,47874, ,42,0.637963,0.547988,204,1171.0,True,True,True,0,0,2
+depot_medium,p11.pddl,probeWalker, ,success,22464,experiment_1,115.0,1,0,23358,5839,128926, ,115,1.73795,1.43196,418,4987.0,True,True,True,0,0,33
+depot_medium,p17.pddl,probeWalker, ,success,21596,experiment_1,42.0,1,0,3426,856,31454, ,42,0.9599690000000001,0.47197,454,1528.0,True,True,True,0,0,51
+depot_medium,p18.pddl,probeWalker, ,success,34276,experiment_1,76.0,1,0,3370,842,31649, ,76,1.101413,0.60394,724,1613.0,True,True,True,0,0,42
+depot_medium,p21.pddl,probeWalker, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.180707,0.43993,792,1701.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,p09.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,p10.pddl,probeWalker, ,success,52956,experiment_1,63.0,1,4,1202,299,2262, ,63,1.44174,0.607986,332,1975.0,True,True,True,5,2,10
+freecell_medium,p11.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,p12.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2862.0, , ,False, , , 
+freecell_medium,p14.pddl,probeWalker, ,success,64824,experiment_1,65.0,1,14,872,214,1472, ,65,1.61782,0.603941,369,2173.0,True,True,True,3,1,6
+freecell_medium,p17.pddl,probeWalker, ,success,105844,experiment_1,89.0,1,1,2135,533,3647, ,89,5.7307500000000005,2.54786,443,8731.0,True,True,True,3,1,3
+freecell_medium,probfreecell-10-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-10-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-11-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-12-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2851.0, , ,False, , , 
+freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,458.0, , ,False, , , 
+freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success,39696,experiment_1,17.0,1,0,70,17,207, ,17,1.1338110000000001,0.0599994,160,1675.0,True,True,True,0,0,7
+freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success,39448,experiment_1,19.0,1,0,78,19,203, ,19,1.053376,0.0559996,161,1604.0,True,True,True,0,0,1
+freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success,56876,experiment_1,24.0,1,0,98,24,291, ,24,1.472734,0.0559717,195,4427.0,True,True,True,4,1,4
+freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success,54932,experiment_1,27.0,1,0,118,29,386, ,27,0.773718,0.0519993,196,1289.0,True,True,True,0,0,6
+freecell_medium,probfreecell-6-1.pddl,probeWalker, ,success,63004,experiment_1,32.0,1,0,182,45,511, ,32,0.979995,0.107997,232,1510.0,True,True,True,2,1,3
+freecell_medium,probfreecell-6-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-6-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2853.0, , ,False, , , 
+freecell_medium,probfreecell-7-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-7-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-7-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-7-5.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , ,268,2907.0, , ,False, , , 
+freecell_medium,probfreecell-8-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2864.0, , ,False, , , 
+freecell_medium,probfreecell-8-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , ,303,2850.0, , ,False, , , 
+freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-9-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2856.0, , ,False, , , 
+freecell_medium,probfreecell-9-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2853.0, , ,False, , , 
+freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-9-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.413617,0.879928,3288,2024.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.388811,0.131997,656,5796.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.5119982000000001,0.01,423,1299.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.903047,0.0719987,1413,7782.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.8996820000000003,0.307993,1604,6082.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.5499829999999997,0.131998,1671,8957.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.3301220000000002,0.0479988,782,5902.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.2535550000000002,0.0120001,776,4403.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.672167,0.075998,619,7904.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.876063,0.0279979,564,1718.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.161982,0.0240007,574,37350.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.817461,0.0239954,744,1327.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.871986,0.0879968,1192,8026.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.201996,0.0519985,691,4480.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.567169,0.0439986,873,6578.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.487143,0.0639991,380,8742.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.176595,0.0439986,883,5024.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,probeWalker, ,success,39892,experiment_1,12.0,1,258,4232,993,29780, ,12,2.01634,1.3959,552,4931.0,True,True,True,0,0,8
+mystery_medium,prob10.pddl,probeWalker, ,success,73084,experiment_1,8.0,1,0,42,10,406, ,8,2.176504,0.0399993,1346,5135.0,True,True,True,0,0,2
+mystery_medium,prob13.pddl,probeWalker, ,success,46528,experiment_1,15.0,1,40,1002,240,8313, ,15,1.371931,0.399961,1427,1885.0,True,True,True,0,0,4
+mystery_medium,prob14.pddl,probeWalker, ,success,88020,experiment_1,11.0,1,0,66,16,762, ,11,2.7052519999999998,0.0879983,1601,5623.0,True,True,True,0,0,11
+mystery_medium,prob15.pddl,probeWalker, ,success,43020,experiment_1,6.0,1,0,46,11,375, ,6,1.1825370000000002,0.0199999,681,4098.0,True,True,True,0,0,1
+mystery_medium,prob17.pddl,probeWalker, ,success,40188,experiment_1,4.0,1,0,26,6,200, ,4,0.9045509,0.01,730,1423.0,True,True,True,0,0,2
+satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,25596,experiment_1,74.0,1,0,394,98,21926, ,74,0.6657109,0.0239305,337,1219.0,True,True,True,0,0,4
+satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,34704,experiment_1,113.0,1,0,1218,304,82060, ,113,1.0120019999999998,0.136002,401,1553.0,True,True,True,0,0,2
+satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,43856,experiment_1,133.0,1,0,3054,763,290707, ,133,1.002878,0.307983,551,1545.0,True,True,True,0,0,1
+satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,104388,experiment_1,187.0,1,0,5454,1363,703317, ,187,2.8216200000000002,1.52761,717,5793.0,True,True,True,0,0,2
+satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,111852,experiment_1,172.0,1,0,7494,1873,1112725, ,172,4.22855,2.34382,788,7174.0,True,True,True,0,0,6
+satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,1.871977,0.267986,816,4824.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102688,experiment_1,141.0,1,0,602,150,113911, ,141,3.6319719999999998,0.211995,966,6962.0,True,True,True,0,0,1
+depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,2.57124,2.41586,489,3946.0,True,True,True,0,0,0
+depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,1.104351,0.975941,204,1181.0,True,True,True,0,0,0
+depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,2.92979,2.65192,356,4206.0,True,True,True,0,0,0
+depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,1.82384,1.58784,408,3121.0,True,True,True,0,0,0
+depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,4.37328,3.30788,663,6297.0,True,True,True,0,0,0
+depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.2729059999999999,0.371983,792,2409.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,0.649223,0.155996,295,694.0,True,True,True,0,0,0
+freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,1.08239,0.163996,296,1167.0,True,True,True,0,0,0
+freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,1.358128,0.603968,332,1428.0,True,True,True,0,0,0
+freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,2.88285,1.69179,334,4825.0,True,True,True,0,0,0
+freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,0.9185380000000001,0.183997,332,976.0,True,True,True,0,0,0
+freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,2.39153,0.92393,369,3509.0,True,True,True,0,0,0
+freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,2.7696199999999997,1.23592,443,3928.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,3.28277,0.927915,375,4402.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,4.552989999999999,1.80792,374,5704.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,2.69497,1.21996,376,3823.0,True,True,True,0,0,0
+freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,3.88551,2.1679,411,5050.0,True,True,True,0,0,0
+freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,4.6018,1.7318,447,5762.0,True,True,True,0,0,0
+freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,5.66327,2.7799,483,6811.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,1.059083,0.0759988,163,1149.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,0.635254,0.0559979,160,700.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,1.053086,0.0519991,162,1149.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,1.021996,0.0559974,161,1105.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,1.054329,0.064331,161,1140.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,0.758794,0.0759757,198,1911.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,1.317161,0.103997,197,2456.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,1.397092,0.111989,195,2532.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,0.722401,0.0479996,198,776.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,0.8219850000000001,0.0559986,196,908.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,1.783877,0.127996,232,2910.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,1.6579920000000001,0.131998,233,2777.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,0.894876,0.103997,231,971.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,1.724461,0.183995,233,2849.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,1.717977,0.223995,232,2905.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,1.304033,0.315978,268,1378.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.139151,0.143996,268,2234.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,1.1284079999999999,0.143998,267,2216.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,1.643898,0.671964,269,2793.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,1.6037949999999999,0.591972,268,2726.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,1.911144,0.775975,306,2999.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,2.566466,0.335969,303,3703.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,2.02703,0.25195,303,3139.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,2.93996,0.847965,303,4072.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,3.62994,1.82795,304,4772.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,3.4158299999999997,2.08384,340,4524.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,1.730848,0.33998,338,2827.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,3.22029,0.823962,339,4359.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,6.8524899999999995,4.32386,339,14106.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.8029000000000002,0.851926,3288,1883.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.721962,0.167995,656,2849.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.4933495,0.0119992,423,562.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.949993,0.0559993,1413,4077.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.8153230000000002,0.283995,1604,3916.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,6.563795000000001,0.131998,1671,11831.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.379836,0.0519949,782,3476.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.559879,0.0199999,776,2679.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,3.272602,0.167996,619,4413.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.873349,0.0279992,564,926.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.573811,0.0319997,574,3700.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.7885913,0.0199989,744,842.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.911969,0.0919985,1192,8175.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,2.4195659999999997,0.140002,691,3556.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,2.855994,0.0439979,873,4005.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.433534,0.0479991,380,2541.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,2.455518,0.119999,883,3588.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,1.4694150000000001,0.783975,552,3558.0,True,True,True,0,0,0
+mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,2.209443,0.0519987,1346,3347.0,True,True,True,0,0,0
+mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.431029,0.427938,1427,1494.0,True,True,True,0,0,0
+mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,3.104326,0.103985,1601,4285.0,True,True,True,0,0,0
+mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,0.966231,0.0240015,681,2087.0,True,True,True,0,0,0
+mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,0.928868,0.0199994,730,988.0,True,True,True,0,0,0
+satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.314809,0.0240003,337,372.0,True,True,True,0,0,0
+satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.494892,0.0839915,401,552.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,1.206256,0.52798,551,1268.0,True,True,True,0,0,0
+satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,2.52807,1.19596,717,3633.0,True,True,True,0,0,0
+satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,3.13994,1.62794,788,4269.0,True,True,True,0,0,0
+satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,1.761367,0.276381,816,2877.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.31037,0.227996,966,3443.0,True,True,True,0,0,0
+depot_medium,p09.pddl,probeWalker, ,success,25776,experiment_1,111.0,1,0,53234,13308,204901, ,111,3.88789,3.71575,525,7004.0,True,True,True,0,0,24
+depot_medium,p10.pddl,probeWalker, ,success,16944,experiment_1,42.0,1,0,12618,3154,48350, ,42,0.6190880000000001,0.547987,204,1137.0,True,True,True,0,0,9
+depot_medium,p11.pddl,probeWalker, ,success,20220,experiment_1,93.0,1,0,8790,2197,60580, ,93,0.7345839999999999,0.531982,418,1271.0,True,True,True,0,0,81
+depot_medium,p17.pddl,probeWalker, ,success,21932,experiment_1,42.0,1,0,3410,852,31820, ,42,0.918575,0.455984,454,1469.0,True,True,True,0,0,50
+depot_medium,p18.pddl,probeWalker, ,success,34104,experiment_1,74.0,1,0,2774,693,26725, ,74,1.224878,0.683975,724,1759.0,True,True,True,0,0,57
+depot_medium,p21.pddl,probeWalker, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.149286,0.41999,792,1677.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,probeWalker, ,success,42960,experiment_1,49.0,1,0,442,110,674, ,49,0.7672720000000001,0.159997,295,1301.0,True,True,True,6,1,1
+freecell_medium,p09.pddl,probeWalker, ,success,43112,experiment_1,59.0,1,8,750,185,878, ,59,1.478883,0.491963,296,2000.0,True,True,True,3,1,4
+freecell_medium,p10.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2865.0, , ,False, , , 
+freecell_medium,p11.pddl,probeWalker, ,success,52108,experiment_1,69.0,1,25,847,205,913, ,69,1.715617,0.775973,334,2238.0,True,True,True,2,1,6
+freecell_medium,p12.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2857.0, , ,False, , , 
+freecell_medium,p14.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2852.0, , ,False, , , 
+freecell_medium,p17.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2846.0, , ,False, , , 
+freecell_medium,probfreecell-10-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success,104964,experiment_1,66.0,1,5,851,211,1531, ,66,2.270343,0.751976,374,5196.0,True,True,True,0,0,2
+freecell_medium,probfreecell-10-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,459.0, , ,False, , , 
+freecell_medium,probfreecell-11-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,460.0, , ,False, , , 
+freecell_medium,probfreecell-12-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2840.0, , ,False, , , 
+freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success,40220,experiment_1,21.0,1,0,86,21,215, ,21,0.56585,0.0359988,163,1083.0,True,True,True,0,0,1
+freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success,39700,experiment_1,17.0,1,0,70,17,189, ,17,0.7584646,0.028,160,1295.0,True,True,True,0,0,1
+freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success,39340,experiment_1,19.0,1,0,78,19,229, ,19,0.5585357,0.0279996,161,1069.0,True,True,True,0,0,2
+freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success,39552,experiment_1,19.0,1,0,78,19,234, ,19,0.665989,0.0239997,161,1200.0,True,True,True,0,0,7
+freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success,57824,experiment_1,25.0,1,0,154,38,596, ,25,0.897651,0.0640006,198,3828.0,True,True,True,3,1,17
+freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-1.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2862.0, , ,False, , , 
+freecell_medium,probfreecell-6-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success,62440,experiment_1,30.0,1,0,186,46,568, ,30,1.929306,0.231996,231,4893.0,True,True,True,5,1,2
+freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success,67880,experiment_1,42.0,1,0,638,159,1325, ,42,1.530947,0.463974,268,2068.0,True,True,True,2,1,10
+freecell_medium,probfreecell-7-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-7-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2859.0, , ,False, , , 
+freecell_medium,probfreecell-7-4.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , ,269,2869.0, , ,False, , , 
+freecell_medium,probfreecell-7-5.pddl,probeWalker, ,success,67460,experiment_1,48.0,1,0,926,231,2441, ,48,1.504986,0.547989,268,2018.0,True,True,True,0,0,3
+freecell_medium,probfreecell-8-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2872.0, , ,False, , , 
+freecell_medium,probfreecell-8-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2894.0, , ,False, , , 
+freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2862.0, , ,False, , , 
+freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-9-1.pddl,probeWalker, ,success,82532,experiment_1, ,0, , , , , , , , ,340,12346.0, , ,False, , , 
+freecell_medium,probfreecell-9-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2849.0, , ,False, , , 
+freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-9-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.3871,0.843949,3288,1989.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.641982,0.151996,656,6701.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.803592,0.0119997,423,1966.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.769931,0.0599984,1413,8841.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.789465,0.259985,1604,6352.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.795796,0.139973,1671,16122.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.096962,0.0359747,782,15995.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.3055539999999999,0.0160031,776,6332.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.722706,0.0879983,619,10901.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.8559955,0.0239983,564,2444.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.17317,0.0240003,574,17762.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.8293452,0.0199991,744,1348.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.857992,0.0719986,1192,6990.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.172796,0.0519985,691,4661.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.437359,0.0199985,873,4514.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.443997,0.0559994,380,6849.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.241997,0.0399991,883,5197.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,probeWalker, ,success,34580,experiment_1,12.0,1,0,122,30,1030, ,12,1.369405,0.119998,552,4310.0,True,True,True,0,0,9
+mystery_medium,prob10.pddl,probeWalker, ,success,73184,experiment_1,8.0,1,0,42,10,408, ,8,2.193482,0.0399995,1346,5135.0,True,True,True,0,0,8
+mystery_medium,prob13.pddl,probeWalker, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.440058,0.447991,1427,1954.0,True,True,True,0,0,1
+mystery_medium,prob14.pddl,probeWalker, ,success,87700,experiment_1,11.0,1,0,66,16,780, ,11,2.741992,0.0999988,1601,5674.0,True,True,True,0,0,7
+mystery_medium,prob15.pddl,probeWalker, ,success,42908,experiment_1,6.0,1,0,46,11,380, ,6,1.030986,0.0239984,681,3937.0,True,True,True,0,0,1
+mystery_medium,prob17.pddl,probeWalker, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,1.01656,0.0200008,730,1529.0,True,True,True,0,0,4
+satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,25212,experiment_1,74.0,1,0,298,74,16572, ,74,0.3075801,0.0199997,337,813.0,True,True,True,0,0,5
+satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,34680,experiment_1,113.0,1,0,1218,304,81723, ,113,0.540785,0.0759878,401,1082.0,True,True,True,0,0,1
+satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,44124,experiment_1,133.0,1,0,3190,797,304454, ,133,0.955659,0.299992,551,1457.0,True,True,True,0,0,1
+satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,104408,experiment_1,187.0,1,0,5454,1363,704684, ,187,2.28395,0.991949,717,5322.0,True,True,True,2,1,5
+satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,103964,experiment_1,172.0,1,0,4638,1159,687412, ,172,2.55503,1.02797,788,5519.0,True,True,True,0,0,6
+satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,98372,experiment_1,151.0,1,0,870,217,130633, ,151,2.9474219999999995,0.45999,816,5994.0,True,True,True,0,0,1
+satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102756,experiment_1,141.0,1,0,602,150,113765, ,141,2.139146,0.239934,966,5273.0,True,True,True,0,0,1
+depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,2.9018,2.60391,489,4272.0,True,True,True,0,0,0
+depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,1.026121,0.907975,204,1101.0,True,True,True,0,0,0
+depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,2.9526,2.65191,356,4343.0,True,True,True,0,0,0
+depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,1.9984000000000002,1.53987,408,3343.0,True,True,True,0,0,0
+depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,1.7860200000000002,1.33192,663,3259.0,True,True,True,0,0,0
+depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.179722,0.479917,792,1239.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,1.32398,0.355978,295,1419.0,True,True,True,0,0,0
+freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,0.639995,0.135997,296,718.0,True,True,True,0,0,0
+freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,2.65936,1.33195,332,3790.0,True,True,True,0,0,0
+freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,2.41912,1.70794,334,4178.0,True,True,True,0,0,0
+freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,0.858411,0.167997,332,937.0,True,True,True,0,0,0
+freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,1.8739599999999998,0.883972,369,3807.0,True,True,True,0,0,0
+freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,5.68685,2.7199,443,6838.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,2.6079600000000003,1.09196,375,3740.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,2.184154,0.767962,374,3289.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,2.84251,1.37996,376,3944.0,True,True,True,0,0,0
+freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,4.36752,2.23587,411,5495.0,True,True,True,0,0,0
+freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,5.32385,1.91986,447,6494.0,True,True,True,0,0,0
+freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,4.63188,2.11591,483,5789.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,0.547822,0.0359921,163,608.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,1.061909,0.0559993,160,1148.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,0.964893,0.0479995,162,1051.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,1.0219900000000002,0.0679929,161,1112.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,0.641309,0.0279994,161,724.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,0.953431,0.123999,198,2112.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,0.767527,0.0519985,197,854.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,0.877473,0.103998,195,1994.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,0.756258,0.0519987,198,839.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,0.8378859999999999,0.0519987,196,917.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,0.942103,0.143997,232,999.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,1.077599,0.0799985,233,1164.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,0.89822,0.0879977,231,955.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,1.113959,0.0919605,233,2297.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,0.93206,0.111997,232,987.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,2.110442,0.311986,268,3237.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.098303,0.111998,268,1147.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,1.433243,0.179996,267,2550.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,1.585976,0.603979,269,1661.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,2.4943999999999997,0.619986,268,3618.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,1.883445,0.751915,306,2979.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,1.34476,0.203988,303,2427.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,1.419982,0.247995,303,2514.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,2.013934,0.787976,303,3100.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,2.95758,1.83194,304,4037.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,3.41377,2.07987,340,4519.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,1.574829,0.32798,338,2691.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,1.7895429999999999,0.443922,339,2884.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,3.5647200000000003,2.19993,339,4683.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,2.7279400000000003,1.63194,3288,4578.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,2.89199,0.263994,656,4034.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.5458781,0.01,423,630.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,4.1758809999999995,0.0519988,1413,5318.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.912757,0.283992,1604,4012.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.7157479999999996,0.175995,1671,8903.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,4.352579,0.0919977,782,5533.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,2.491986,0.0279999,776,3629.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.735483,0.0719982,619,2844.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.877997,0.0279982,564,950.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.7848949999999997,0.0359981,574,8194.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,1.729931,0.0279992,744,2862.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,5.631001,0.195998,1192,11058.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.227997,0.047999,691,2338.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,2.5892,0.0439982,873,3724.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.644912,0.0559912,380,2767.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,2.193448,0.0999978,883,3319.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,2.4335,1.42395,552,4547.0,True,True,True,0,0,0
+mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,2.1078710000000003,0.0439926,1346,3198.0,True,True,True,0,0,0
+mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.474386,0.475989,1427,1541.0,True,True,True,0,0,0
+mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,2.8034209999999997,0.0959853,1601,3937.0,True,True,True,0,0,0
+mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,0.95597,0.0319717,681,2051.0,True,True,True,0,0,0
+mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,0.987934,0.01,730,1063.0,True,True,True,0,0,0
+satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.3762802,0.0319866,337,451.0,True,True,True,0,0,0
+satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,1.0419829999999999,0.139984,401,1125.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,1.085382,0.307651,551,1160.0,True,True,True,0,0,0
+satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,3.5489800000000002,0.991967,717,4697.0,True,True,True,0,0,0
+satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,6.04453,3.10388,788,7187.0,True,True,True,0,0,0
+satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,1.981174,0.307973,816,3116.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.267703,0.267987,966,3383.0,True,True,True,0,0,0
+depot_medium,p09.pddl,probeWalker, ,success,20968,experiment_1,123.0,1,0,9630,2407,32062, ,123,0.826307,0.663979,525,1347.0,True,True,True,0,0,11
+depot_medium,p10.pddl,probeWalker, ,success,16844,experiment_1,45.0,1,0,10650,2662,40026, ,45,0.522409,0.45199,204,1035.0,True,True,True,0,0,4
+depot_medium,p11.pddl,probeWalker, ,success,20224,experiment_1,93.0,1,0,8786,2196,59507, ,93,0.7499560000000001,0.535955,418,4025.0,True,True,True,0,0,68
+depot_medium,p17.pddl,probeWalker, ,success,21692,experiment_1,42.0,1,0,3414,853,32166, ,42,0.901906,0.439969,454,1443.0,True,True,True,0,0,46
+depot_medium,p18.pddl,probeWalker, ,success,33852,experiment_1,70.0,1,0,2726,681,22064, ,70,1.14918,0.655913,724,4898.0,True,True,True,0,0,12
+depot_medium,p21.pddl,probeWalker, ,success,67268,experiment_1,33.0,1,0,734,183,14896, ,33,1.261983,0.367987,792,4222.0,True,True,True,0,0,2
+freecell_medium,p08.pddl,probeWalker, ,success,42776,experiment_1,53.0,1,0,522,130,782, ,53,0.6739620000000001,0.151971,295,1185.0,True,True,True,5,1,1
+freecell_medium,p09.pddl,probeWalker, ,success,42336,experiment_1,47.0,1,1,323,80,640, ,47,1.3179919999999998,0.247987,296,1863.0,True,True,True,5,1,1
+freecell_medium,p10.pddl,probeWalker, ,success,51640,experiment_1,50.0,1,1,463,115,864, ,50,0.988366,0.207996,332,3944.0,True,True,True,3,1,10
+freecell_medium,p11.pddl,probeWalker, ,success,44656,experiment_1, ,0, , , , , , , , ,334,3675.0, , ,False, , , 
+freecell_medium,p12.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,p14.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,p17.pddl,probeWalker, ,success,105108,experiment_1,80.0,1,0,1362,340,2365, ,80,3.30372,1.57993,443,6291.0,True,True,True,3,1,5
+freecell_medium,probfreecell-10-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,462.0, , ,False, , , 
+freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-10-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,458.0, , ,False, , , 
+freecell_medium,probfreecell-11-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-12-3.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2869.0, , ,False, , , 
+freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success,40172,experiment_1,20.0,1,0,86,21,239, ,20,1.043989,0.0359996,163,1600.0,True,True,True,3,1,6
+freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success,40600,experiment_1,18.0,1,0,74,18,200, ,18,1.0259070000000001,0.0279505,162,1557.0,True,True,True,0,0,3
+freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success,55764,experiment_1,27.0,1,0,114,28,327, ,27,0.85396,0.0519985,196,1387.0,True,True,True,0,0,2
+freecell_medium,probfreecell-6-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,459.0, , ,False, , , 
+freecell_medium,probfreecell-6-2.pddl,probeWalker, ,success,60772,experiment_1,29.0,1,0,118,29,329, ,29,0.963253,0.075997,233,1487.0,True,True,True,0,0,2
+freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,0.878831,0.0919988,231,1392.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-5.pddl,probeWalker, ,success,60820,experiment_1,34.0,1,0,210,52,630, ,34,1.137868,0.208013,232,1649.0,True,True,True,2,1,2
+freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success,67128,experiment_1,42.0,1,0,406,101,1126, ,42,1.27244,0.267995,268,1782.0,True,True,True,3,1,4
+freecell_medium,probfreecell-7-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2857.0, , ,False, , , 
+freecell_medium,probfreecell-7-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-7-4.pddl,probeWalker, ,success,67432,experiment_1,41.0,1,0,282,70,822, ,41,1.141973,0.179977,269,1681.0,True,True,True,5,1,1
+freecell_medium,probfreecell-7-5.pddl,probeWalker, ,success,66624,experiment_1,44.0,1,0,398,99,1152, ,44,1.2569,0.247995,268,1777.0,True,True,True,4,1,2
+freecell_medium,probfreecell-8-1.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2845.0, , ,False, , , 
+freecell_medium,probfreecell-8-2.pddl,probeWalker, ,success,77580,experiment_1,48.0,1,0,890,222,2451, ,48,2.2606669999999998,0.691977,303,5213.0,True,True,True,0,0,3
+freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,probfreecell-9-1.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2856.0, , ,False, , , 
+freecell_medium,probfreecell-9-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2866.0, , ,False, , , 
+freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-9-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
+logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.82889,1.26396,3288,4863.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.676523,0.131971,656,7481.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,1.051537,0.0199994,423,2233.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.812066,0.0559997,1413,9363.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,4.40738,0.255996,1604,8054.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.6288799999999997,0.143997,1671,9921.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.077257,0.0399997,782,13747.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.2729849999999998,0.0159994,776,6498.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.779464,0.0839968,619,6108.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.8647288,0.0239996,564,3487.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.165996,0.0279993,574,36642.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,1.0479859999999999,0.059999,744,1626.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.9539929999999996,0.0799994,1192,6190.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.192626,0.0479541,691,5496.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.547248,0.0439991,873,5616.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.2997969999999999,0.0439993,380,5578.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.131167,0.0439991,883,4984.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,probeWalker, ,success,37764,experiment_1,11.0,1,119,1825,426,12717, ,11,1.133481,0.575922,552,1639.0,True,True,True,1,1,4
+mystery_medium,prob10.pddl,probeWalker, ,success,73164,experiment_1,8.0,1,0,42,10,407, ,8,2.273225,0.0479993,1346,5186.0,True,True,True,0,0,7
+mystery_medium,prob13.pddl,probeWalker, ,success,44768,experiment_1,18.0,1,4,182,44,1648, ,18,2.328173,0.159996,1427,5289.0,True,True,True,3,2,21
+mystery_medium,prob14.pddl,probeWalker, ,success,88444,experiment_1,11.0,1,0,74,18,769, ,11,2.814458,0.0959974,1601,5761.0,True,True,True,0,0,4
+mystery_medium,prob15.pddl,probeWalker, ,success,42888,experiment_1,6.0,1,0,46,11,381, ,6,0.914196,0.0280001,681,1423.0,True,True,True,0,0,3
+mystery_medium,prob17.pddl,probeWalker, ,success,40272,experiment_1,4.0,1,0,26,6,223, ,4,0.9686773,0.0119996,730,3880.0,True,True,True,0,0,8
+satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,25600,experiment_1,74.0,1,0,394,98,21827, ,74,0.5979982,0.0439985,337,1159.0,True,True,True,0,0,2
+satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.523386,0.0839701,401,1084.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,44136,experiment_1,133.0,1,0,3190,797,303855, ,133,0.992371,0.295952,551,1501.0,True,True,True,0,0,2
+satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,51592,experiment_1,156.0,1,0,1458,364,189398, ,156,2.384513,0.487989,1228,5418.0,True,True,True,0,0,4
+satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,102476,experiment_1,172.0,1,0,4134,1033,611493, ,172,2.61367,1.02395,788,5537.0,True,True,True,0,0,1
+satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,98316,experiment_1,140.0,1,0,834,208,125480, ,140,2.361239,0.431936,816,5278.0,True,True,True,0,0,2
+satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.159652,0.215995,966,8524.0,True,True,True,0,0,0
+depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,2.5330399999999997,2.36786,489,3768.0,True,True,True,0,0,0
+depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,0.7909820000000001,0.727969,204,859.0,True,True,True,0,0,0
+depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,2.91763,2.63992,356,4302.0,True,True,True,0,0,0
+depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,3.2701499999999997,2.83991,408,4754.0,True,True,True,0,0,0
+depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,1.74742,1.28797,663,3497.0,True,True,True,0,0,0
+depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.427658,0.391992,792,2571.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,0.829988,0.15599,295,900.0,True,True,True,0,0,0
+freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,0.588046,0.115997,296,634.0,True,True,True,0,0,0
+freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,1.3299370000000001,0.599968,332,1410.0,True,True,True,0,0,0
+freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,2.45693,1.66395,334,3590.0,True,True,True,0,0,0
+freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,1.093475,0.183978,332,2225.0,True,True,True,0,0,0
+freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,4.0948899999999995,2.19192,369,6040.0,True,True,True,0,0,0
+freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,3.05118,1.23197,443,4211.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,3.5755,0.831982,375,4715.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,3.9238600000000003,0.831941,374,5062.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,5.54948,2.79591,376,6695.0,True,True,True,0,0,0
+freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,3.94561,2.22787,411,5047.0,True,True,True,0,0,0
+freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,3.6367900000000004,1.87187,447,4737.0,True,True,True,0,0,0
+freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,4.72494,2.33994,483,13042.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,1.047513,0.0679923,163,1143.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,0.5259979,0.0279993,160,583.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,0.5875760999999999,0.0279994,162,662.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,1.007142,0.0599997,161,1084.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,0.585036,0.0319988,161,655.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,1.409914,0.111999,198,2541.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,0.774488,0.0559984,197,837.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,0.8262210000000001,0.111997,195,1942.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,0.727011,0.0519984,198,778.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,0.725461,0.0519985,196,791.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,1.8863210000000001,0.299979,232,3019.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,1.159408,0.125058,233,1237.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,1.0863289999999999,0.123998,231,2197.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,1.7568860000000002,0.191997,233,2878.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,0.998602,0.107997,232,1049.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,1.411753,0.331985,268,1495.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.41489,0.215985,268,1499.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,1.4312230000000001,0.259969,267,1520.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,3.19936,1.31996,269,4335.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,1.6598060000000001,0.65195,268,1742.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,1.900151,0.763975,306,3003.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,1.63313,0.19195,303,2770.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,1.685046,0.263936,303,2816.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,1.909972,0.779977,303,3018.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,2.63394,1.56395,304,4688.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,4.7058,2.25182,340,12026.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,1.705997,0.336001,338,2844.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,2.35489,0.859965,339,3456.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,3.7923999999999998,2.13589,339,4913.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,2.60962,1.52392,3288,3731.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.495994,0.155996,656,2608.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.9591786,0.0159999,423,1016.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,3.378767,0.0559997,1413,8546.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,5.722268,0.343993,1604,11278.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,4.1175,0.115998,1671,5326.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,4.568974,0.0799978,782,9798.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.5012,0.0279997,776,2621.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.7437740000000002,0.0759991,619,2830.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,1.067219,0.0679997,564,1154.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.629836,0.0359993,574,7929.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.8099972,0.0239992,744,860.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,2.9506699999999997,0.0759977,1192,4107.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.2640740000000001,0.0599995,691,2344.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.375278,0.0199995,873,2452.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,2.5919939999999997,0.0759986,380,3736.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.10154,0.0479991,883,1164.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,1.148992,0.619944,552,1200.0,True,True,True,0,0,0
+mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,2.209053,0.0440003,1346,3336.0,True,True,True,0,0,0
+mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.413077,0.44799,1427,1474.0,True,True,True,0,0,0
+mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,2.990874,0.107987,1601,8311.0,True,True,True,0,0,0
+mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,1.707111,0.0519981,681,2826.0,True,True,True,0,0,0
+mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,1.0959986,0.0120004,730,2207.0,True,True,True,0,0,0
+satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.3639989,0.0239993,337,444.0,True,True,True,0,0,0
+satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.6675420000000001,0.0839852,401,734.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,1.065671,0.303982,551,2252.0,True,True,True,0,0,0
+satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,2.77348,1.12797,717,3891.0,True,True,True,0,0,0
+satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,3.16744,1.6318,788,4277.0,True,True,True,0,0,0
+satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,2.351973,0.583987,816,3493.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.07594,0.171996,966,3182.0,True,True,True,0,0,0
+depot_medium,p09.pddl,probeWalker, ,success,20960,experiment_1,123.0,1,0,9618,2404,31503, ,123,1.0658910000000001,0.751892,525,4315.0,True,True,True,0,0,11
+depot_medium,p10.pddl,probeWalker, ,success,14400,experiment_1,41.0,1,0,7518,1879,33286, ,41,0.293996,0.175997,246,813.0,True,True,True,0,0,79
+depot_medium,p11.pddl,probeWalker, ,success,19952,experiment_1,94.0,1,0,8678,2169,50814, ,94,0.7323109999999999,0.519986,418,1282.0,True,True,True,0,0,63
+depot_medium,p17.pddl,probeWalker, ,success,21512,experiment_1,42.0,1,0,3258,814,31437, ,42,0.49517,0.239995,454,1016.0,True,True,True,0,0,47
+depot_medium,p18.pddl,probeWalker, ,success,33876,experiment_1,74.0,1,0,2494,623,23004, ,74,0.9858560000000001,0.491967,724,1496.0,True,True,True,0,0,27
+depot_medium,p21.pddl,probeWalker, ,success,67320,experiment_1,33.0,1,0,734,183,14882, ,33,1.0630169999999999,0.367992,792,3981.0,True,True,True,0,0,1
+freecell_medium,p08.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,p09.pddl,probeWalker, ,success,43000,experiment_1,54.0,1,11,1001,247,1282, ,54,1.064605,0.291994,296,1608.0,True,True,True,2,1,9
+freecell_medium,p10.pddl,probeWalker, ,success,52144,experiment_1,58.0,1,5,1003,249,1554, ,58,1.1668880000000001,0.435991,332,1676.0,True,True,True,0,0,2
+freecell_medium,p11.pddl,probeWalker, ,success,45712,experiment_1, ,0, , , , , , , , ,334,3757.0, , ,False, , , 
+freecell_medium,p12.pddl,probeWalker, ,success,50680,experiment_1,54.0,1,2,428,106,771, ,54,0.9399150000000001,0.179996,332,1451.0,True,True,True,4,1,4
+freecell_medium,p14.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
+freecell_medium,p17.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2861.0, , ,False, , , 
+freecell_medium,probfreecell-10-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2860.0, , ,False, , , 
+freecell_medium,probfreecell-10-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
 freecell_medium,probfreecell-10-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
 freecell_medium,probfreecell-11-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
 freecell_medium,probfreecell-12-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
-freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,453.0, , ,False, , , 
-freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
-freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
-freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
-freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
-freecell_medium,probfreecell-6-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-6-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
-freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success,60872,experiment_1,34.0,1,0,258,64,715, ,34,0.9355789999999999,0.127998,231,1442.0,True,True,True,5,1,1
-freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-13-2.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2849.0, , ,False, , , 
+freecell_medium,probfreecell-4-1.pddl,probeWalker, ,success,40044,experiment_1,20.0,1,0,82,20,244, ,20,0.5999907,0.0279929,163,1159.0,True,True,True,2,1,11
+freecell_medium,probfreecell-4-2.pddl,probeWalker, ,success,39728,experiment_1,18.0,1,0,74,18,228, ,18,0.5559967,0.0240008,160,1065.0,True,True,True,3,1,4
+freecell_medium,probfreecell-4-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-4-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-4-5.pddl,probeWalker, ,success,40444,experiment_1,18.0,1,0,74,18,217, ,18,0.5896687,0.0279995,161,1111.0,True,True,True,2,1,12
+freecell_medium,probfreecell-5-1.pddl,probeWalker, ,success,56332,experiment_1,25.0,1,0,126,31,515, ,25,1.4851299999999998,0.107991,198,4438.0,True,True,True,6,2,7
+freecell_medium,probfreecell-5-2.pddl,probeWalker, ,success,56468,experiment_1,25.0,1,0,134,33,439, ,25,0.82533,0.0599992,197,1334.0,True,True,True,4,1,3
+freecell_medium,probfreecell-5-3.pddl,probeWalker, ,success,55684,experiment_1,25.0,1,0,170,42,689, ,25,0.812401,0.0719984,195,1327.0,True,True,True,2,1,13
+freecell_medium,probfreecell-5-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,458.0, , ,False, , , 
+freecell_medium,probfreecell-5-5.pddl,probeWalker, ,success,54864,experiment_1,27.0,1,0,114,28,384, ,27,0.807983,0.0719874,196,1335.0,True,True,True,0,0,5
+freecell_medium,probfreecell-6-1.pddl,probeWalker, ,success,62116,experiment_1,31.0,1,0,218,54,642, ,31,1.013271,0.131989,232,1525.0,True,True,True,3,1,9
+freecell_medium,probfreecell-6-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2864.0, , ,False, , , 
+freecell_medium,probfreecell-6-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-6-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,457.0, , ,False, , , 
 freecell_medium,probfreecell-6-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success,68068,experiment_1,41.0,1,0,658,164,1882, ,41,1.508829,0.455992,268,2033.0,True,True,True,3,1,11
-freecell_medium,probfreecell-7-2.pddl,probeWalker, ,success,67404,experiment_1,35.0,1,0,150,37,390, ,35,1.084863,0.10399,268,1593.0,True,True,True,0,0,1
-freecell_medium,probfreecell-7-3.pddl,probeWalker, ,success,66588,experiment_1,36.0,1,0,226,56,707, ,36,1.158869,0.159997,267,4080.0,True,True,True,0,0,1
-freecell_medium,probfreecell-7-4.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2870.0, , ,False, , , 
-freecell_medium,probfreecell-7-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-8-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2843.0, , ,False, , , 
-freecell_medium,probfreecell-8-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2868.0, , ,False, , , 
-freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
-freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2848.0, , ,False, , , 
-freecell_medium,probfreecell-9-1.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
-freecell_medium,probfreecell-9-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2859.0, , ,False, , , 
-freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,456.0, , ,False, , , 
+freecell_medium,probfreecell-7-1.pddl,probeWalker, ,success,67576,experiment_1,44.0,1,0,522,130,1522, ,44,1.395833,0.343993,268,1956.0,True,True,True,3,1,9
+freecell_medium,probfreecell-7-2.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-7-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-7-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-7-5.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
+freecell_medium,probfreecell-8-1.pddl,probeWalker, ,success, ,experiment_1, ,0, , , , , , , , , ,2841.0, , ,False, , , 
+freecell_medium,probfreecell-8-2.pddl,probeWalker,['Invalid macros was generated!'],success, ,experiment_1, ,0, , , , , , , , , ,2863.0, , ,False, , , 
+freecell_medium,probfreecell-8-3.pddl,probeWalker, ,success,75992,experiment_1,43.0,1,0,482,120,1142, ,43,1.611231,0.347992,303,4525.0,True,True,True,5,1,5
+freecell_medium,probfreecell-8-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,455.0, , ,False, , , 
+freecell_medium,probfreecell-8-5.pddl,probeWalker, ,success,76176,experiment_1,51.0,1,0,1094,273,2625, ,51,3.20451,1.68788,304,6120.0,True,True,True,4,1,5
+freecell_medium,probfreecell-9-1.pddl,probeWalker, ,success,103392,experiment_1,63.0,1,0,2282,570,4474, ,63,3.37597,1.93581,340,6285.0,True,True,True,5,1,5
+freecell_medium,probfreecell-9-2.pddl,probeWalker, ,success,101516,experiment_1,55.0,1,0,558,139,1324, ,55,2.975959,0.46398,338,5946.0,True,True,True,3,1,5
+freecell_medium,probfreecell-9-3.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
 freecell_medium,probfreecell-9-4.pddl,probeWalker, ,success, ,experiment_1, , , , , , , , , , , ,454.0, , ,False, , , 
-logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.69809,1.04394,3288,4858.0,True,True,True,0,0,0
-mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.413597,0.143997,656,7961.0,True,True,True,0,0,0
-mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.931981,0.0199995,423,1623.0,True,True,True,0,0,0
-mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,3.341955,0.123998,1413,10300.0,True,True,True,0,0,0
-mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,2.85884,0.279996,1604,16295.0,True,True,True,0,0,0
-mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.269988,0.107999,1671,7612.0,True,True,True,0,0,0
-mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.211709,0.0359998,782,8174.0,True,True,True,0,0,0
-mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.3037379999999998,0.0199986,776,4456.0,True,True,True,0,0,0
-mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.538513,0.0599991,619,11042.0,True,True,True,0,0,0
-mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,0.973671,0.0320001,564,1631.0,True,True,True,0,0,0
-mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.429774,0.0319992,574,25416.0,True,True,True,0,0,0
-mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.9776092,0.0199745,744,1528.0,True,True,True,0,0,0
-mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,3.133941,0.103974,1192,6329.0,True,True,True,0,0,0
-mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.215116,0.0519984,691,5713.0,True,True,True,0,0,0
-mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,1.448836,0.0199807,873,5267.0,True,True,True,0,0,0
-mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.408836,0.0519983,380,4832.0,True,True,True,0,0,0
-mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.112648,0.0439994,883,1932.0,True,True,True,0,0,0
-mystery_medium,prob06.pddl,probeWalker, ,success,35108,experiment_1,12.0,1,0,122,30,973, ,12,0.6468780000000001,0.0559985,552,1153.0,True,True,True,0,0,8
-mystery_medium,prob10.pddl,probeWalker, ,success,73144,experiment_1,8.0,1,0,42,10,506, ,8,2.241387,0.0519995,1346,5155.0,True,True,True,0,0,16
-mystery_medium,prob13.pddl,probeWalker, ,success,46600,experiment_1,16.0,1,5,247,60,2211, ,16,2.451405,0.335994,1427,5404.0,True,True,True,2,1,12
-mystery_medium,prob14.pddl,probeWalker, ,success,88148,experiment_1,11.0,1,0,66,16,686, ,11,2.885984,0.131992,1601,5813.0,True,True,True,0,0,6
-mystery_medium,prob15.pddl,probeWalker, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,1.003998,0.019999,681,1546.0,True,True,True,0,0,0
-mystery_medium,prob17.pddl,probeWalker, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,0.9033325000000001,0.01,730,1412.0,True,True,True,0,0,0
-satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,25464,experiment_1,74.0,1,0,394,98,22124, ,74,0.3239909,0.0239983,337,830.0,True,True,True,0,0,6
-satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,34832,experiment_1,113.0,1,0,1294,323,87478, ,113,0.592502,0.0879914,401,1099.0,True,True,True,0,0,2
-satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,44132,experiment_1,133.0,1,0,3190,797,304522, ,133,1.013298,0.307981,551,1515.0,True,True,True,0,0,3
-satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,89544,experiment_1,140.0,1,0,562,140,72524, ,140,1.656813,0.15596,717,4637.0,True,True,True,0,0,2
-satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,102600,experiment_1,172.0,1,0,4134,1033,612677, ,172,4.06393,0.883935,788,7088.0,True,True,True,0,0,6
-satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,104444,experiment_1,142.0,1,0,1186,296,178728, ,142,1.921921,0.335923,816,5031.0,True,True,True,0,0,2
-satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102756,experiment_1,141.0,1,0,602,150,113765, ,141,2.035993,0.175997,966,5196.0,True,True,True,0,0,1
-depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,2.59788,2.33989,489,3864.0,True,True,True,0,0,0
-depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,1.037974,0.907975,204,1113.0,True,True,True,0,0,0
-depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,1.40963,1.25583,356,2663.0,True,True,True,0,0,0
-depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,3.58679,3.31191,408,5139.0,True,True,True,0,0,0
-depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,4.2219,3.31591,663,5786.0,True,True,True,0,0,0
-depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.087238,0.375994,792,1148.0,True,True,True,0,0,0
-freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,0.692898,0.171972,295,754.0,True,True,True,0,0,0
-freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,0.6328199999999999,0.131997,296,689.0,True,True,True,0,0,0
-freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,1.331709,0.603939,332,1389.0,True,True,True,0,0,0
-freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,2.88773,1.62787,334,4656.0,True,True,True,0,0,0
-freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,0.948417,0.167968,332,1025.0,True,True,True,0,0,0
-freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,3.9825799999999996,1.98392,369,5119.0,True,True,True,0,0,0
-freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,5.61617,2.68792,443,6771.0,True,True,True,0,0,0
-freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,4.63393,1.83994,375,5815.0,True,True,True,0,0,0
-freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,2.71896,0.807924,374,3820.0,True,True,True,0,0,0
-freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,4.4093,2.78392,376,5507.0,True,True,True,0,0,0
-freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,3.89518,2.17594,411,5011.0,True,True,True,0,0,0
-freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,3.65288,1.83596,447,4741.0,True,True,True,0,0,0
-freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,6.9933700000000005,3.29986,483,8127.0,True,True,True,0,0,0
-freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,0.932628,0.0319992,163,1008.0,True,True,True,0,0,0
-freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,0.5481973,0.0279989,160,607.0,True,True,True,0,0,0
-freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,0.5576608000000001,0.0279991,162,637.0,True,True,True,0,0,0
-freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,1.097061,0.0639997,161,1177.0,True,True,True,0,0,0
-freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,0.611711,0.048,161,675.0,True,True,True,0,0,0
-freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,1.3744290000000001,0.119999,198,2501.0,True,True,True,0,0,0
-freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,0.847545,0.0519988,197,933.0,True,True,True,0,0,0
-freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,0.807663,0.059998,195,1925.0,True,True,True,0,0,0
-freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,0.778948,0.0559705,198,855.0,True,True,True,0,0,0
-freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,0.975942,0.0479433,196,1052.0,True,True,True,0,0,0
-freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,1.1517249999999999,0.135997,232,2281.0,True,True,True,0,0,0
-freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,0.992679,0.0999986,233,1068.0,True,True,True,0,0,0
-freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,1.089996,0.0839988,231,2210.0,True,True,True,0,0,0
-freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,0.939049,0.0919985,233,1019.0,True,True,True,0,0,0
-freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,1.303884,0.107998,232,2437.0,True,True,True,0,0,0
-freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,1.29986,0.291995,268,2387.0,True,True,True,0,0,0
-freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.050714,0.103997,268,2148.0,True,True,True,0,0,0
-freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,1.125553,0.147997,267,1186.0,True,True,True,0,0,0
-freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,1.6519780000000002,0.619982,269,2770.0,True,True,True,0,0,0
-freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,1.648056,0.591962,268,1726.0,True,True,True,0,0,0
-freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,4.2458,1.81594,306,5391.0,True,True,True,0,0,0
-freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,1.781034,0.231946,303,2906.0,True,True,True,0,0,0
-freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,1.430853,0.271994,303,2547.0,True,True,True,0,0,0
-freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,1.99126,0.855985,303,3074.0,True,True,True,0,0,0
-freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,2.90595,1.77595,304,3985.0,True,True,True,0,0,0
-freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,3.51802,2.23189,340,4609.0,True,True,True,0,0,0
-freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,3.1670100000000003,0.715988,338,4374.0,True,True,True,0,0,0
-freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,1.858721,0.395985,339,2977.0,True,True,True,0,0,0
-freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,3.10684,1.85192,339,4197.0,True,True,True,0,0,0
-logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,2.52172,1.45994,3288,4631.0,True,True,True,0,0,0
-mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.5859960000000002,0.139998,656,2729.0,True,True,True,0,0,0
-mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.9674929,0.0159999,423,1051.0,True,True,True,0,0,0
-mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,3.459302,0.119998,1413,4611.0,True,True,True,0,0,0
-mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,3.221815,0.339987,1604,8405.0,True,True,True,0,0,0
-mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.501911,0.131991,1671,4611.0,True,True,True,0,0,0
-mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,3.159938,0.0479984,782,4273.0,True,True,True,0,0,0
-mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.304862,0.0199875,776,2406.0,True,True,True,0,0,0
-mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.703108,0.0799823,619,2812.0,True,True,True,0,0,0
-mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,1.665834,0.02798,564,2780.0,True,True,True,0,0,0
-mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.419446,0.0319988,574,3519.0,True,True,True,0,0,0
-mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.965498,0.0240002,744,1041.0,True,True,True,0,0,0
-mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,3.018932,0.0759982,1192,8211.0,True,True,True,0,0,0
-mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,1.175997,0.0599991,691,2263.0,True,True,True,0,0,0
-mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,2.69592,0.0320002,873,3828.0,True,True,True,0,0,0
-mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,2.5226859999999998,0.0479209,380,3643.0,True,True,True,0,0,0
-mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,2.1242199999999998,0.0759997,883,3258.0,True,True,True,0,0,0
-mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,1.3807399999999999,0.69998,552,1460.0,True,True,True,0,0,0
-mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,4.414098,0.099999,1346,5613.0,True,True,True,0,0,0
-mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.8864450000000001,0.483981,1427,3004.0,True,True,True,0,0,0
-mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,3.1767659999999998,0.131998,1601,4306.0,True,True,True,0,0,0
-mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,0.8968360000000001,0.0199992,681,951.0,True,True,True,0,0,0
-mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,0.8910732,0.01,730,980.0,True,True,True,0,0,0
-satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.4479244,0.0439988,337,525.0,True,True,True,0,0,0
-satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.9955550000000001,0.139997,401,1082.0,True,True,True,0,0,0
-satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,1.353109,0.307984,551,2481.0,True,True,True,0,0,0
-satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,2.32043,0.963956,717,3441.0,True,True,True,0,0,0
-satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,3.5419599999999996,1.42796,788,4664.0,True,True,True,0,0,0
-satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,3.5053229999999997,0.519981,816,4648.0,True,True,True,0,0,0
-satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,4.283158,0.431992,966,5421.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,probeWalker, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.5424,0.987973,3288,5140.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,probeWalker, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.3739089999999998,0.135997,656,8834.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,probeWalker, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,0.9799977,0.0239991,423,1956.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,probeWalker, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.824555,0.0599973,1413,6442.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,probeWalker, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,3.080148,0.295994,1604,6650.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,probeWalker, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.8258639999999997,0.143997,1671,11215.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,probeWalker, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.27289,0.0479991,782,13448.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,probeWalker, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.255997,0.015999,776,5455.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,probeWalker, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,1.743662,0.0879984,619,14605.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,probeWalker, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,1.423544,0.0639982,564,5365.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,probeWalker, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.21517,0.028,574,52691.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,probeWalker, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,1.139735,0.0399984,744,4057.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,probeWalker, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,3.3033970000000004,0.167996,1192,7826.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,probeWalker, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,2.31511,0.115986,691,6121.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,probeWalker, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,2.4875309999999997,0.0199997,873,8770.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,probeWalker, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.3199969999999999,0.0519995,380,6964.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,probeWalker, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,1.664814,0.0400004,883,6072.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,probeWalker, ,success,36864,experiment_1,12.0,1,132,1962,457,13348, ,12,1.224498,0.583927,552,1756.0,True,True,True,0,0,5
+mystery_medium,prob10.pddl,probeWalker, ,success,73328,experiment_1,8.0,1,1,39,9,435, ,8,2.1632949999999997,0.036,1346,5088.0,True,True,True,0,0,14
+mystery_medium,prob13.pddl,probeWalker, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.373945,0.431948,1427,1878.0,True,True,True,0,0,2
+mystery_medium,prob14.pddl,probeWalker, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,2.9897709999999997,0.087998,1601,5941.0,True,True,True,0,0,1
+mystery_medium,prob15.pddl,probeWalker, ,success,42928,experiment_1,6.0,1,0,46,11,376, ,6,0.8781735,0.0159997,681,1401.0,True,True,True,0,0,1
+mystery_medium,prob17.pddl,probeWalker, ,success,40188,experiment_1,4.0,1,0,26,6,271, ,4,1.955981,0.0239995,730,4923.0,True,True,True,0,0,19
+satellite_medium,p21-HC-pfile1.pddl,probeWalker, ,success,25728,experiment_1,74.0,1,0,394,98,22223, ,74,0.323844,0.0240001,337,825.0,True,True,True,0,0,7
+satellite_medium,p22-HC-pfile2.pddl,probeWalker, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.8418289999999999,0.0799895,401,1398.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,probeWalker, ,success,44128,experiment_1,133.0,1,0,3190,797,305253, ,133,0.980669,0.307978,551,1492.0,True,True,True,0,0,3
+satellite_medium,p24-HC-pfile4.pddl,probeWalker, ,success,99712,experiment_1,177.0,1,0,3274,818,422895, ,177,1.969352,0.655967,717,4902.0,True,True,True,0,0,2
+satellite_medium,p25-HC-pfile5.pddl,probeWalker, ,success,110940,experiment_1,172.0,1,0,7158,1789,1059058, ,172,3.13988,1.61589,788,6085.0,True,True,True,0,0,2
+satellite_medium,p26-HC-pfile6.pddl,probeWalker, ,success,98376,experiment_1,151.0,1,0,958,239,144413, ,151,3.829965,0.455981,816,6809.0,True,True,True,0,0,6
+satellite_medium,p27-HC-pfile7.pddl,probeWalker, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.203992,0.179996,966,6314.0,True,True,True,0,0,0
+depot_medium,p09.pddl,sameoutput, ,success,26808,experiment_1,104.0,1,0,22770,5692,61916, ,104,2.4647699999999997,2.30793,489,3815.0,True,True,True,0,0,0
+depot_medium,p10.pddl,sameoutput, ,success,16980,experiment_1,42.0,1,0,12614,3153,46764, ,42,1.0240230000000001,0.895969,204,1106.0,True,True,True,0,0,0
+depot_medium,p11.pddl,sameoutput, ,success,27024,experiment_1,125.0,1,0,10982,2745,43282, ,125,1.3661599999999998,1.21996,356,2601.0,True,True,True,0,0,0
+depot_medium,p17.pddl,sameoutput, ,success,26800,experiment_1,42.0,1,0,12750,3187,82678, ,42,2.15565,1.72394,408,3681.0,True,True,True,0,0,0
+depot_medium,p18.pddl,sameoutput, ,success,50784,experiment_1,82.0,1,0,3926,981,30826, ,82,3.3134,2.83986,663,5232.0,True,True,True,0,0,0
+depot_medium,p21.pddl,sameoutput, ,success,67324,experiment_1,33.0,1,0,734,183,14882, ,33,1.0896789999999998,0.363966,792,1147.0,True,True,True,0,0,0
+freecell_medium,p08.pddl,sameoutput, ,success,42912,experiment_1,56.0,1,0,534,133,803, ,56,0.674948,0.159997,295,730.0,True,True,True,0,0,0
+freecell_medium,p09.pddl,sameoutput, ,success,42456,experiment_1,50.0,1,1,351,87,657, ,50,1.171992,0.267993,296,1264.0,True,True,True,0,0,0
+freecell_medium,p10.pddl,sameoutput, ,success,52196,experiment_1,62.0,1,3,1341,334,2002, ,62,1.289145,0.599944,332,2379.0,True,True,True,0,0,0
+freecell_medium,p11.pddl,sameoutput, ,success,52400,experiment_1,70.0,1,90,3896,951,3779, ,70,5.05188,3.74788,334,6187.0,True,True,True,0,0,0
+freecell_medium,p12.pddl,sameoutput, ,success,50792,experiment_1,55.0,1,2,388,96,693, ,55,0.8934139999999999,0.171977,332,950.0,True,True,True,0,0,0
+freecell_medium,p14.pddl,sameoutput, ,success,64744,experiment_1,66.0,1,19,1497,369,2337, ,66,1.89194,0.935943,369,3802.0,True,True,True,0,0,0
+freecell_medium,p17.pddl,sameoutput, ,success,105252,experiment_1,88.0,1,5,1275,317,2005, ,88,5.769410000000001,2.8359,443,6919.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-2.pddl,sameoutput, ,success,104440,experiment_1,57.0,1,0,874,218,1942, ,57,3.48488,0.843642,375,4617.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-3.pddl,sameoutput, ,success,104984,experiment_1,65.0,1,5,855,212,1577, ,65,2.28856,0.807983,374,3399.0,True,True,True,0,0,0
+freecell_medium,probfreecell-10-5.pddl,sameoutput, ,success,105060,experiment_1,79.0,1,6,1380,343,2215, ,79,2.96529,1.47585,376,4053.0,True,True,True,0,0,0
+freecell_medium,probfreecell-11-3.pddl,sameoutput, ,success,112960,experiment_1,72.0,1,19,2189,542,3291, ,72,3.93602,2.11593,411,5041.0,True,True,True,0,0,0
+freecell_medium,probfreecell-12-3.pddl,sameoutput, ,success,118220,experiment_1,81.0,1,10,1628,404,2803, ,81,6.8561,3.36786,447,8002.0,True,True,True,0,0,0
+freecell_medium,probfreecell-13-2.pddl,sameoutput, ,success,121280,experiment_1,99.0,1,68,1994,481,2875, ,99,4.02443,2.09994,483,5152.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-1.pddl,sameoutput, ,success,40220,experiment_1,21.0,1,0,86,21,214, ,21,0.817998,0.0359987,163,896.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-2.pddl,sameoutput, ,success,39632,experiment_1,17.0,1,0,70,17,186, ,17,1.028305,0.0559999,160,1111.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-3.pddl,sameoutput, ,success,40512,experiment_1,18.0,1,0,74,18,186, ,18,0.9757750000000001,0.051998,162,1051.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-4.pddl,sameoutput, ,success,39336,experiment_1,19.0,1,0,78,19,223, ,19,1.01041,0.0599986,161,1099.0,True,True,True,0,0,0
+freecell_medium,probfreecell-4-5.pddl,sameoutput, ,success,39456,experiment_1,19.0,1,0,78,19,200, ,19,1.0839509999999999,0.0559984,161,1178.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-1.pddl,sameoutput, ,success,56356,experiment_1,27.0,1,0,130,32,448, ,27,1.069912,0.0560004,198,1147.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-2.pddl,sameoutput, ,success,55868,experiment_1,24.0,1,0,110,27,310, ,24,1.350717,0.107999,197,2469.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-3.pddl,sameoutput, ,success,56772,experiment_1,25.0,1,0,102,25,233, ,25,1.29566,0.0959981,195,2410.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-4.pddl,sameoutput, ,success,55216,experiment_1,25.0,1,0,110,27,356, ,25,0.719997,0.0519986,198,794.0,True,True,True,0,0,0
+freecell_medium,probfreecell-5-5.pddl,sameoutput, ,success,55356,experiment_1,27.0,1,0,114,28,344, ,27,0.6899980000000001,0.0519985,196,1799.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-1.pddl,sameoutput, ,success,62824,experiment_1,35.0,1,0,238,59,545, ,35,1.481988,0.123998,232,2605.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-2.pddl,sameoutput, ,success,60880,experiment_1,29.0,1,0,118,29,325, ,29,1.630155,0.135998,233,2759.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-3.pddl,sameoutput, ,success,62340,experiment_1,32.0,1,0,130,32,382, ,32,0.899995,0.0879982,231,958.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-4.pddl,sameoutput, ,success,61924,experiment_1,33.0,1,0,162,40,461, ,33,0.915437,0.0919404,233,2017.0,True,True,True,0,0,0
+freecell_medium,probfreecell-6-5.pddl,sameoutput, ,success,61024,experiment_1,34.0,1,0,190,47,595, ,34,1.131381,0.107997,232,2251.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-1.pddl,sameoutput, ,success,67332,experiment_1,46.0,1,0,482,120,1186, ,46,1.2501449999999998,0.299995,268,1304.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-2.pddl,sameoutput, ,success,67304,experiment_1,35.0,1,0,150,37,387, ,35,1.271971,0.103998,268,2392.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-3.pddl,sameoutput, ,success,66004,experiment_1,36.0,1,0,226,56,706, ,36,2.1624470000000002,0.327992,267,3320.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-4.pddl,sameoutput, ,success,67200,experiment_1,43.0,1,0,990,247,2188, ,43,2.336212,0.619987,269,3455.0,True,True,True,0,0,0
+freecell_medium,probfreecell-7-5.pddl,sameoutput, ,success,67420,experiment_1,50.0,1,0,942,235,2604, ,50,2.2699670000000003,0.555648,268,3394.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-1.pddl,sameoutput, ,success,77576,experiment_1,56.0,1,0,1042,260,2420, ,56,3.6839399999999998,1.58795,306,4823.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-2.pddl,sameoutput, ,success,74876,experiment_1,43.0,1,0,282,70,827, ,43,2.151963,0.251995,303,3274.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-3.pddl,sameoutput, ,success,75088,experiment_1,41.0,1,0,306,76,947, ,41,1.491636,0.263994,303,2600.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-4.pddl,sameoutput, ,success,76636,experiment_1,60.0,1,0,1130,282,2638, ,60,4.041930000000001,1.88394,303,5184.0,True,True,True,0,0,0
+freecell_medium,probfreecell-8-5.pddl,sameoutput, ,success,76916,experiment_1,54.0,1,0,2418,604,6539, ,54,3.5351799999999995,1.90389,304,4716.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-1.pddl,sameoutput, ,success,103228,experiment_1,73.0,1,0,2282,570,4204, ,73,4.3798200000000005,2.01987,340,5520.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-2.pddl,sameoutput, ,success,100228,experiment_1,47.0,1,0,418,104,1092, ,47,1.83972,0.339968,338,2964.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-3.pddl,sameoutput, ,success,101036,experiment_1,53.0,1,0,470,117,1346, ,53,2.063225,0.399986,339,3197.0,True,True,True,0,0,0
+freecell_medium,probfreecell-9-4.pddl,sameoutput, ,success,99032,experiment_1,72.0,1,0,2414,603,4209, ,72,4.01485,1.94391,339,5171.0,True,True,True,0,0,0
+logistics_medium,p04.pddl,sameoutput, ,success,43584,experiment_1,121.0,1,0,6726,1681,540626, ,121,1.472978,0.911969,3288,3089.0,True,True,True,0,0,0
+mprime_medium,prob06.pddl,sameoutput, ,success,62648,experiment_1,16.0,1,0,166,41,10333, ,16,1.643703,0.13199,656,2799.0,True,True,True,0,0,0
+mprime_medium,prob08.pddl,sameoutput, ,success,27896,experiment_1,7.0,1,0,46,11,1461, ,7,1.001358,0.0159999,423,1085.0,True,True,True,0,0,0
+mprime_medium,prob10.pddl,sameoutput, ,success,96908,experiment_1,8.0,1,0,42,10,2674, ,8,2.729846,0.0599992,1413,3846.0,True,True,True,0,0,0
+mprime_medium,prob13.pddl,sameoutput, ,success,95148,experiment_1,15.0,1,0,202,50,10218, ,15,4.028959,0.29198,1604,5153.0,True,True,True,0,0,0
+mprime_medium,prob14.pddl,sameoutput, ,success,114388,experiment_1,11.0,1,0,66,16,4589, ,11,3.3509800000000003,0.127998,1671,4465.0,True,True,True,0,0,0
+mprime_medium,prob15.pddl,sameoutput, ,success,89772,experiment_1,6.0,1,0,46,11,2838, ,6,2.416904,0.0479915,782,3528.0,True,True,True,0,0,0
+mprime_medium,prob17.pddl,sameoutput, ,success,52480,experiment_1,4.0,1,0,26,6,1301, ,4,1.3225149999999999,0.0159992,776,2454.0,True,True,True,0,0,0
+mprime_medium,prob18.pddl,sameoutput, ,success,71396,experiment_1,17.0,1,0,106,26,6929, ,17,2.283089,0.135985,619,3409.0,True,True,True,0,0,0
+mprime_medium,prob19.pddl,sameoutput, ,success,40144,experiment_1,6.0,1,0,62,15,1303, ,6,1.1413446,0.0240002,564,2262.0,True,True,True,0,0,0
+mprime_medium,prob20.pddl,sameoutput, ,success,92176,experiment_1,7.0,1,0,34,8,2423, ,7,2.61918,0.0279995,574,3736.0,True,True,True,0,0,0
+mprime_medium,prob21.pddl,sameoutput, ,success,37500,experiment_1,6.0,1,0,66,16,752, ,6,0.9455129999999999,0.0279995,744,1023.0,True,True,True,0,0,0
+mprime_medium,prob22.pddl,sameoutput, ,success,104560,experiment_1,9.0,1,0,50,12,3261, ,9,3.029984,0.0919986,1192,4164.0,True,True,True,0,0,0
+mprime_medium,prob23.pddl,sameoutput, ,success,52408,experiment_1,10.0,1,0,82,20,4585, ,10,2.435727,0.103998,691,3568.0,True,True,True,0,0,0
+mprime_medium,prob24.pddl,sameoutput, ,success,55792,experiment_1,8.0,1,0,38,9,1022, ,8,2.4346669999999997,0.0199992,873,3558.0,True,True,True,0,0,0
+mprime_medium,prob30.pddl,sameoutput, ,success,71904,experiment_1,9.0,1,0,74,18,2750, ,9,1.3126289999999998,0.0399995,380,2410.0,True,True,True,0,0,0
+mprime_medium,prob33.pddl,sameoutput, ,success,47748,experiment_1,12.0,1,0,86,21,2026, ,12,2.143994,0.107998,883,3284.0,True,True,True,0,0,0
+mystery_medium,prob06.pddl,sameoutput, ,success,36956,experiment_1,12.0,1,132,1966,458,13126, ,12,1.307575,0.687942,552,1388.0,True,True,True,0,0,0
+mystery_medium,prob10.pddl,sameoutput, ,success,73060,experiment_1,8.0,1,0,42,10,386, ,8,4.178992,0.0999988,1346,9408.0,True,True,True,0,0,0
+mystery_medium,prob13.pddl,sameoutput, ,success,46524,experiment_1,15.0,1,40,994,238,8142, ,15,1.5141179999999999,0.535945,1427,1567.0,True,True,True,0,0,0
+mystery_medium,prob14.pddl,sameoutput, ,success,88124,experiment_1,11.0,1,0,66,16,668, ,11,2.8199449999999997,0.0933872,1601,3917.0,True,True,True,0,0,0
+mystery_medium,prob15.pddl,sameoutput, ,success,42928,experiment_1,6.0,1,0,46,11,369, ,6,0.895007,0.024,681,2012.0,True,True,True,0,0,0
+mystery_medium,prob17.pddl,sameoutput, ,success,40108,experiment_1,4.0,1,0,26,6,194, ,4,1.6378248,0.0119998,730,2754.0,True,True,True,0,0,0
+satellite_medium,p21-HC-pfile1.pddl,sameoutput, ,success,25604,experiment_1,74.0,1,0,394,98,21633, ,74,0.4039989,0.0239994,337,489.0,True,True,True,0,0,0
+satellite_medium,p22-HC-pfile2.pddl,sameoutput, ,success,34816,experiment_1,113.0,1,0,1294,323,86832, ,113,0.588604,0.0839621,401,661.0,True,True,True,0,0,0
+satellite_medium,p23-HC-pfile3.pddl,sameoutput, ,success,44120,experiment_1,133.0,1,0,3190,797,303657, ,133,1.071944,0.355978,551,1141.0,True,True,True,0,0,0
+satellite_medium,p24-HC-pfile4.pddl,sameoutput, ,success,104972,experiment_1,186.0,1,0,5646,1411,730896, ,186,2.31511,1.01997,717,3405.0,True,True,True,0,0,0
+satellite_medium,p25-HC-pfile5.pddl,sameoutput, ,success,111864,experiment_1,172.0,1,0,7494,1873,1108687, ,172,3.18954,1.72388,788,4286.0,True,True,True,0,0,0
+satellite_medium,p26-HC-pfile6.pddl,sameoutput, ,success,104404,experiment_1,142.0,1,0,1186,296,178136, ,142,1.818051,0.267994,816,2961.0,True,True,True,0,0,0
+satellite_medium,p27-HC-pfile7.pddl,sameoutput, ,success,102688,experiment_1,141.0,1,0,602,150,113761, ,141,2.119977,0.191979,966,3260.0,True,True,True,0,0,0
