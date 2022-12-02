@@ -1,0 +1,9 @@
+domain.pddl
+files.txt
+p21-HC-pfile1.pddl
+p22-HC-pfile2.pddl
+p23-HC-pfile3.pddl
+p24-HC-pfile4.pddl
+p25-HC-pfile5.pddl
+p26-HC-pfile6.pddl
+p27-HC-pfile7.pddl

@@ -1,0 +1,12 @@
+domain.pddl
+files.txt
+p01.pddl
+p02.pddl
+p03.pddl
+p04.pddl
+p07.pddl
+p08.pddl
+p13.pddl
+p14.pddl
+p16.pddl
+p19.pddl
