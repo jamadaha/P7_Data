@@ -1,9 +1,0 @@
-domain.pddl
-files.txt
-p28-HC-pfile8.pddl
-p29-HC-pfile9.pddl
-p30-HC-pfile10.pddl
-p31-HC-pfile11.pddl
-p34-HC-pfile14.pddl
-p35-HC-pfile15.pddl
-p36-HC-pfile16.pddl

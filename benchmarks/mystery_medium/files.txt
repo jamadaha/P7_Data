@@ -1,8 +1,0 @@
-domain.pddl
-files.txt
-prob06.pddl
-prob10.pddl
-prob13.pddl
-prob14.pddl
-prob15.pddl
-prob17.pddl

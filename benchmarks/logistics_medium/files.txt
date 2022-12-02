@@ -1,3 +1,0 @@
-domain.pddl
-files.txt
-p04.pddl

@@ -1,8 +1,0 @@
-domain.pddl
-files.txt
-p15.pddl
-p16.pddl
-p17.pddl
-p18.pddl
-p19.pddl
-p20.pddl

@@ -1,7 +1,0 @@
-domain.pddl
-files.txt
-p05.pddl
-p06.pddl
-p07.pddl
-p08.pddl
-p09.pddl
