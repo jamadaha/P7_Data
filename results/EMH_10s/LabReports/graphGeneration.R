@@ -128,7 +128,6 @@ report[report=="hillClimberWalker"] <- "HCW"
       xlab("Time (Seconds)") + 
       ylab("Problems Solved") + 
       scale_linetype_manual(values=c(2,1,3,4,2,3,4))
-    print(searchTimeCulPlot)
     ggsave(plot=searchTimeCulPlot, filename="searchTimeCulm.pdf", width=imgWidth, height=imgHeight)
     ggsave(plot=searchTimeCulPlot, filename="searchTimeCulm_big.pdf", width=imgWidthBig, height=imgHeightBig)
 
@@ -196,8 +195,8 @@ report[report=="hillClimberWalker"] <- "HCW"
       geom_bar(stat="identity") +
       xlab("Algorithm (s)") + 
       ylab("Sum of Reformulation Time (s)")
-    ggsave(plot=sRT, filename="SumReformTime.pdf", width=imgWidth, height=imgHeight)
-    ggsave(plot=sRT, filename="SumReformTime_big.pdf", width=imgWidthBig, height=imgHeightBig)
+    ggsave(plot=sRT, filename="SumReformTime.pdf", width=imgWidth, height=imgHeight / 2)
+    ggsave(plot=sRT, filename="SumReformTime_big.pdf", width=imgWidthBig, height=imgHeightBig / 2)
 
 # Sum Search time
     #timeAvg <- as.data.table(report)[,list(time=mean(search_time) / 1000),c('domain', 'algorithm', 'problem')]
@@ -306,8 +305,8 @@ report[report=="hillClimberWalker"] <- "HCW"
           labs(domain="Domain") +
           scale_fill_grey() +
           geom_abline(intercept = 0, slope = 1);
-        ggsave(plot=plot, filename=paste("evalPlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
-        ggsave(plot=plot, filename=paste("evalPlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
+        #ggsave(plot=plot, filename=paste("evalPlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
+        #ggsave(plot=plot, filename=paste("evalPlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
         plot <- plot
       }) 
     }
@@ -315,6 +314,71 @@ report[report=="hillClimberWalker"] <- "HCW"
     combined <- ggarrange(plotlist=plots,
                           ncol = 3, nrow = 2, common.legend = TRUE, legend = "right")
     ggsave(plot=combined, filename="evalPlot_big.pdf", width=imgWidth * 2, height=imgHeight)  
+    
+# Search Time Graphs
+    easyProblems = report
+    easyProblems = easyProblems[!grepl('_easy', easyProblems$domain),]
+    easyProblems = easyProblems[!grepl('_medium', easyProblems$domain),]
+    easyProblems = easyProblems[!grepl('_hard', easyProblems$domain),]
+    easyProblems = easyProblems[!grepl('_insane', easyProblems$domain),]
+    easyProblems <- rbind(report[report$domain %like% "_easy", ], easyProblems)
+    if (nrow(easyProblems) > 0)
+      easyProblems$domain <- paste0("1. Easy")
+
+    mediumProblems <- report[report$domain %like% "_medium", ]
+    if (nrow(mediumProblems) > 0)
+      mediumProblems$domain <- paste0("2. Medium")
+
+    hardProblems <- report[report$domain %like% "_hard", ]
+    if (nrow(hardProblems) > 0)
+      hardProblems$domain <- paste0("3. Hard")
+
+    allProblems = rbind(easyProblems,mediumProblems,hardProblems)
+
+    algo1 = "FD";
+
+    set1 <- subset(allProblems, algorithm == algo1)
+    set1 <- as.data.table(set1)[,list(yvalue=mean(search_time)),c('problem','domain')]
+
+    uniqueSet <- unique(subset(allProblems, algorithm != algo1)$algorithm)
+    plots <- vector('list', 0)
+    for (i in uniqueSet) {
+      set2 <- subset(allProblems, algorithm == i)
+      set2 <- as.data.table(set2)[,list(xvalue=mean(search_time)),c('problem','domain')]
+  
+      set <- merge(set1, set2, fill=TRUE)
+      setInteresting <- subset(set, mean(xvalue) < mean(yvalue))
+      set <- anti_join(set, setInteresting)
+  
+      plots[[i]] <- local({
+        i <- i
+        plot <- 
+          ggplot() + 
+          geom_point(data=set, aes(x=xvalue, y=yvalue),color='gray') +
+          geom_point(data=setInteresting, aes(x=xvalue, y=yvalue, shape=domain, color=domain), size=3) +
+          xlab(i) + 
+          ylab(algo1) +
+          theme(
+            text=element_text(size=20),
+            plot.title = element_blank(),
+            legend.title = element_blank(),
+            legend.key.size = unit(3,"line")
+          ) + 
+          ggtitle("Search Time") + 
+          scale_x_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
+          scale_y_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
+          labs(domain="Domain") +
+          scale_fill_grey() +
+          geom_abline(intercept = 0, slope = 1);
+        #ggsave(plot=plot, filename=paste("searchTimePlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
+        #ggsave(plot=plot, filename=paste("searchTimePlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
+        plot <- plot
+      }) 
+    }
+
+    combined <- ggarrange(plotlist=plots,
+                          ncol = 3, nrow = 2, common.legend = TRUE, legend = "right")
+    ggsave(plot=combined, filename="searchTimePlot_big.pdf", width=imgWidth * 2, height=imgHeight)  
 
 # Walker valid vs. invlaid paths
     #walkerPathsSet <- subset(report, algorithm != "FD")
@@ -328,6 +392,5 @@ report[report=="hillClimberWalker"] <- "HCW"
     #  xlab("Walker") + 
     #  ylab("Number of paths") +
     #  labs(fill='Paths');
-    #print (walkerInvalidPathsPlot);
     #ggsave(plot=walkerInvalidPathsPlot, filename="validvsinvalidpaths.pdf", width=imgWidth, height=imgHeight)
     #ggsave(plot=walkerInvalidPathsPlot, filename="validvsinvalidpaths_big.pdf", width=imgWidthBig, height=imgHeightBig)
