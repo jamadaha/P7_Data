@@ -282,15 +282,12 @@ report[report=="hillClimberWalker"] <- "HCW"
       set2 <- as.data.table(set2)[,list(xvalue=mean(evaluations)),c('problem','domain')]
   
       set <- merge(set1, set2, fill=TRUE)
-      setInteresting <- subset(set, mean(xvalue) < mean(yvalue))
-      set <- anti_join(set, setInteresting)
   
       plots[[i]] <- local({
         i <- i
         plot <- 
           ggplot() + 
-          geom_point(data=set, aes(x=xvalue, y=yvalue),color='gray') +
-          geom_point(data=setInteresting, aes(x=xvalue, y=yvalue, shape=domain, color=domain), size=3) +
+          geom_point(data=set, aes(x=xvalue, y=yvalue, shape=domain, color=domain), size=3) +
           xlab(i) + 
           ylab(algo1) +
           theme(
@@ -304,6 +301,7 @@ report[report=="hillClimberWalker"] <- "HCW"
           scale_y_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           labs(domain="Domain") +
           scale_fill_grey() +
+          guides(color = guide_legend(override.aes = list(size = 10))) +
           geom_abline(intercept = 0, slope = 1);
         #ggsave(plot=plot, filename=paste("evalPlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
         #ggsave(plot=plot, filename=paste("evalPlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
@@ -347,15 +345,12 @@ report[report=="hillClimberWalker"] <- "HCW"
       set2 <- as.data.table(set2)[,list(xvalue=mean(search_time)),c('problem','domain')]
   
       set <- merge(set1, set2, fill=TRUE)
-      setInteresting <- subset(set, mean(xvalue) < mean(yvalue))
-      set <- anti_join(set, setInteresting)
-  
+
       plots[[i]] <- local({
         i <- i
         plot <- 
           ggplot() + 
-          geom_point(data=set, aes(x=xvalue, y=yvalue),color='gray') +
-          geom_point(data=setInteresting, aes(x=xvalue, y=yvalue, shape=domain, color=domain), size=3) +
+          geom_point(data=set, aes(x=xvalue, y=yvalue, shape=domain, color=domain), size=3) +
           xlab(i) + 
           ylab(algo1) +
           theme(
@@ -369,6 +364,7 @@ report[report=="hillClimberWalker"] <- "HCW"
           scale_y_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           labs(domain="Domain") +
           scale_fill_grey() +
+          guides(color = guide_legend(override.aes = list(size = 10))) +
           geom_abline(intercept = 0, slope = 1);
         #ggsave(plot=plot, filename=paste("searchTimePlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
         #ggsave(plot=plot, filename=paste("searchTimePlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
