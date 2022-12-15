@@ -300,9 +300,9 @@ report[report=="hillClimberWalker"] <- "HCW"
           scale_x_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           scale_y_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           labs(domain="Domain") +
-          scale_fill_grey() +
           guides(color = guide_legend(override.aes = list(size = 10))) +
-          geom_abline(intercept = 0, slope = 1);
+          geom_abline(intercept = 0, slope = 1) +
+          scale_colour_grey(start = .1, end = .6);
         #ggsave(plot=plot, filename=paste("evalPlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
         #ggsave(plot=plot, filename=paste("evalPlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
         plot <- plot
@@ -363,9 +363,9 @@ report[report=="hillClimberWalker"] <- "HCW"
           scale_x_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           scale_y_log10(limits=c(min(set2$xvalue,set1$yvalue),max(set2$xvalue,set1$yvalue))) +
           labs(domain="Domain") +
-          scale_fill_grey() +
           guides(color = guide_legend(override.aes = list(size = 10))) +
-          geom_abline(intercept = 0, slope = 1);
+          geom_abline(intercept = 0, slope = 1) +
+          scale_colour_grey(start = .1, end = .6);
         #ggsave(plot=plot, filename=paste("searchTimePlot_",i,".pdf", sep=""), width=imgWidth, height=imgHeight)
         #ggsave(plot=plot, filename=paste("searchTimePlot_",i,"_big.pdf", sep=""), width=imgWidth, height=imgHeight) 
         plot <- plot
