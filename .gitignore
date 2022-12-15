@@ -357,3 +357,5 @@ MigrationBackup/
 out/
 
 P7Requirements/
+
+*.pdf
